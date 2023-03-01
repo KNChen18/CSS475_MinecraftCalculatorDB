@@ -2,8 +2,10 @@
 -- DROP DATABASE `MINECRAFT`;
 -- SHOW DATABASES;
 -- USE `MINECRAFT`;
--- DROP TABLE ARMOR;
--- DROP TABLE MOB;
+
+DROP TABLE ARMOR;
+DROP TABLE MOB;
+
 -- Ka Hin 
 -- Note: It is just initalizing my part
 CREATE TABLE `ARMOR`(
