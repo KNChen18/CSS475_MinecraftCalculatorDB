@@ -60,20 +60,28 @@ SELECT * FROM ARMOR;
 
 DESCRIBE `ARMOR`; -- display how we store the ARMOR TABLE
 
+
+
 CREATE TABLE MOB(
-`ID` INT PRIMARY KEY UNIQUE NOT NULL,
+`NamingID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL,
 `Name` VARCHAR ( 40 ) UNIQUE NOT NULL,
 `Health` INT NOT NULL,
-`Damage Per Hit` INT,
+`Attack Damage` INT,
 `Attack Speed` INT,
 `Special Abilities` VARCHAR(50), -- temporary set to 50 words
 `Total Resistance` INT,
+`Wears Armor` TINYINT,
+`Equips Weapon` TINYINT,
 `ARMOR ID` INT  UNIQUE NOT NULL,
 `WEAPON ID` INT UNIQUE NOT NULL
 -- ARMOR ID and WEAPON are foreign key
 );
 
+
+SELECT * FROM `MOB`;
 DESCRIBE `MOB`; -- display how we store the MOB TABLE
+
+
 
 CREATE TABLE `POTION`(
     `Potion ID` INT PRIMARY KEY UNIQUE NOT NULL,
