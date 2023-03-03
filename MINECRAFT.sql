@@ -77,7 +77,12 @@ DESCRIBE `MOB`; -- display how we store the MOB TABLE
 
 CREATE TABLE `POTION`(
     `Potion ID` INT PRIMARY KEY UNIQUE NOT NULL,
-    `Name` VARCHAR( 20 ) UNIQUE NOT NULL
+    `Name` VARCHAR( 20 ) UNIQUE NOT NULL,
+    `Health` INT NOT NULL,
+    `Attack Damage` INT , -- assume they are all in maximum damage
+    `Attack Speed` FLOAT,
+    `Special Abilities` VARCHAR(50),
+    `Total Resistance` INT NOT NULL
 );
 
 DESCRIBE `POTION`;
