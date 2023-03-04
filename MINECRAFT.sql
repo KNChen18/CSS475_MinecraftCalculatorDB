@@ -205,7 +205,7 @@ CREATE TABLE `WEAPON`(
 -- INSERT INTO WEAPON VALUES ()
 
 CREATE TABLE `Material`(
-    `MaterialID` INT PRIMARY KEY NOT NULL,
+    `MaterialID` VARCHAR(41) PRIMARY KEY NOT NULL,
     `Name` VARCHAR(41) CHECK( `Name` IN ('*EMPTY*', 'Stick', 'Oak Plank', 'Cobblestone',
     'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'String'))
 );
