@@ -180,45 +180,49 @@ CREATE TABLE `POTION AFFECT`(
 DESCRIBE `POTION AFFECT`;
 -- end of Ka Hin 
 
--- --------------------------------malachi 3/1------------------------------------
+-- --------------------------------malachi------------------------------------
 
 CREATE TABLE `WEAPON`(
     `WeaponID` INT PRIMARY KEY UNIQUE NOT NULL ,
-    `Name` VARCHAR(50) UNIQUE NOT NULL,
-    CONSTRAINT chk_weapon_name CHECK ( `Name` IN ( 'Wooden Shovel', 'Stone Shovel', 'Iron Shovel', 'Gold Shovel', 'Diamond Shovel', 'Netherite Shovel'
+    `Name` VARCHAR( 'Wooden Shovel', 'Stone Shovel', 'Iron Shovel', 'Gold Shovel', 'Diamond Shovel', 'Netherite Shovel'
                     'Wooden Hoe', 'Stone Hoe', 'Iron Hoe', 'Gold Hoe', 'Diamond Hoe', 'Netherite Hoe'
                     'Wooden Sword', 'Stone Sword', 'Iron Sword', 'Gold Sword', 'Diamond Sword', 'Netherite Sword'
                     'Wooden Axe', 'Stone Axe', 'Iron Axe', 'Gold Axe', 'Diamond Axe', 'Netherite Axe'
                     'Wooden Pickaxe', 'Stone Pickaxe', 'Iron Pickaxe', 'Gold Pickaxe', 'Diamond Pickaxe', 'Netherite Pickaxe'
-                    )) ,
-	`MaterialType` VARCHAR(10) NOT NULL,
-    CONSTRAINT chk_Material_Type CHECK ( `MaterialType` IN ('Wooden', 'Stone', 'Iron', 'Gold', 'Diamond', 'Netherite')),
-    `WeaponType` VARCHAR(10) NOT NULL,
-    CONSTRAINT chk_Weapon_Type CHECK ( `WeaponType` IN ('Shovel', 'Hoe', 'Sword', 'Axe', 'Pickaxe')),
-    -- `WeaponRecipe` RECIPE
+                    ) UNIQUE NOT NULL,
+	`MaterialType` VARCHAR('Wooden', 'Stone', 'Iron', 'Gold', 'Diamond', 'Netherite') NOT NULL,
+    `WeaponType` VARCHAR('Shovel', 'Hoe', 'Sword', 'Axe', 'Pickaxe') NOT NULL,
+    `WeaponRecipe` RECIPE
     `durability` INT  NOT NULL,
     `knockback` INT NOT NULL,
     `base damage` INT NOT NULL,
-    `reload time` INT NOT NULL
+    `reload time` INT NOT NULL,
+    `enchantment` ENCHANTMENT NOT NULL,
+    ``
 );
 
--- CREATE TABLE `Material`(
---     `MaterialID` INT PRIMARY KEY NOT NULL,
---     `Name` VARCHAR(`*EMPTY*`, `Stick`, `Oak Plank`, `Cobblestone`, `Iron Ingot`, `Gold Ingot`, `Diamond`, `Netherite Ingot`, `String`)
--- );
+INSERT INTO WEAPON VALUES ()
 
--- CREATE TABLE `Recipe`(
---     `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL --takes in reference key from `WEAPON` how?
---     `Material1` VARCHAR(Material.MaterialID)    -- is set to be a materialID 
---     `Material2` VARCHAR(Material.MaterialID)
---     `Material3` VARCHAR(Material.MaterialID)
---     `Material4` VARCHAR(Material.MaterialID)
---     `Material5` VARCHAR(Material.MaterialID)
---     `Material6` VARCHAR(Material.MaterialID)
---     `Material7` VARCHAR(Material.MaterialID)
---     `Material8` VARCHAR(Material.MaterialID)
---     `Material9` VARCHAR(Material.MaterialID)
--- );
+CREATE TABLE `Material`(
+    `MaterialID` INT PRIMARY KEY NOT NULL,
+    `Name` VARCHAR(`Empty`, `Stick`, `Oak Plank`, `Cobblestone`, `Iron Ingot`, `Gold Ingot`, `Diamond`, `Netherite Ingot`, `String`)
+);
+
+CREATE TABLE `Recipe`(
+    `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL,
+    `Material1` VARCHAR(Material.MaterialID) NOT NULL,
+    `Material2` VARCHAR(Material.MaterialID) NOT NULL,
+    `Material3` VARCHAR(Material.MaterialID) NOT NULL,
+    `Material4` VARCHAR(Material.MaterialID) NOT NULL,
+    `Material5` VARCHAR(Material.MaterialID) NOT NULL,
+    `Material6` VARCHAR(Material.MaterialID) NOT NULL,
+    `Material7` VARCHAR(Material.MaterialID) NOT NULL,
+    `Material8` VARCHAR(Material.MaterialID) NOT NULL,
+    `Material9` VARCHAR(Material.MaterialID) NOT NULL
+);
+--takes in reference key from `WEAPON` how will this be done??
+INSERT INTO 
+
 
 -- -------------------------------- end of malachi ------------------------------------
 -- Kris
