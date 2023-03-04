@@ -211,7 +211,8 @@ CREATE TABLE `Material`(
 );
 
 CREATE TABLE `Recipe`(
-    `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL, -- takes in reference key from `WEAPON` how?
+    `RecipeID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL, -- recipe ID is the same as namingID of the item being created 
+    `Output_NamingID` VARCHAR (41), -- this is foreign key of the output
     `Material1` VARCHAR(41),    -- is set to be a materialID
     `Material2` VARCHAR(41),
     `Material3` VARCHAR(41),
