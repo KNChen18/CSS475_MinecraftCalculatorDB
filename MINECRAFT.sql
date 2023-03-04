@@ -2,12 +2,15 @@ SHOW DATABASES;
 CREATE DATABASE `MINECRAFT`;
 SHOW DATABASES;
 
+
 USE `MINECRAFT`;
+
 
 -- DROP TABLE ARMOR;
 -- DROP TABLE MOB;
 
--- Ka Hin 
+
+-- Ka Hin
 -- Note: It is just initalizing my part
 CREATE TABLE `ARMOR`(
    `NamingID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL ,
@@ -19,6 +22,7 @@ CREATE TABLE `ARMOR`(
    `Enchantment ID` INT
 );
 
+
 -- Helmets
 INSERT INTO ARMOR VALUES( 'leather_helmet', 'Leather Cap', 'Leather', 55, 1, 0.1,NULL);
 INSERT INTO ARMOR VALUES( 'golden_helmet', 'Golden Helmet', 'Gold', 77, 2, 0.1,NULL);
@@ -27,6 +31,8 @@ INSERT INTO ARMOR VALUES( 'iron_helmet', 'Iron Helmet', 'Iron', 165, 2, 0.1,NULL
 INSERT INTO ARMOR VALUES( 'diamond_helmet', 'Diamond Helmet', 'Diamond', 363, 3, 0.1,NULL);
 INSERT INTO ARMOR VALUES( 'netherite_helmet', 'Netherite Helmet', 'Netherite Ingot', 407, 3, 0.1,NULL);
 INSERT INTO ARMOR VALUES( 'turtle_helmet', 'Turtle Shell', 'Scute', 275, 2, 0.1,NULL);
+
+
 
 
 -- Chestplate
@@ -38,6 +44,8 @@ INSERT INTO ARMOR VALUES( 'diamond_chestplate', 'Diamond Chestplate', 'Diamond',
 INSERT INTO ARMOR VALUES( 'netherite_chestplate', 'Netherite Chestplate', 'Netherite Ingot', 592, 8, 0.1,NULL);
 
 
+
+
 -- leggings
 INSERT INTO ARMOR VALUES( 'leather_boots', 'Leather Pants', 'Leather', 75, 2, 0.1,NULL);
 INSERT INTO ARMOR VALUES( 'golden_boots', 'Golden Leggings', 'Gold', 105, 1.5, 0.1,NULL);
@@ -45,6 +53,8 @@ INSERT INTO ARMOR VALUES( 'chainmail_boots', 'Chainmail Leggings', 'Chainmail', 
 INSERT INTO ARMOR VALUES( 'iron_boots', 'Iron Leggings', 'Iron', 225, 5, 0.1,NULL);
 INSERT INTO ARMOR VALUES( 'diamond_boots', 'Diamond Leggings', 'Diamond', 495, 6, 0.1,NULL);
 INSERT INTO ARMOR VALUES( 'netherite_boots', 'Netherite Leggings', 'Netherite Ingot', 555, 6, 0.1,NULL);
+
+
 
 
 -- boots
@@ -56,10 +66,12 @@ INSERT INTO ARMOR VALUES( 'diamond_leggings', 'Diamond Boots', 'Diamond', 429,3,
 INSERT INTO ARMOR VALUES( 'netherite_leggings', 'Netherite Boots', 'Netherite Ingot', 481, 3, 0.1,NULL);
 
 
+
+
 SELECT * FROM ARMOR;
 
-DESCRIBE `ARMOR`; -- display how we store the ARMOR TABLE
 
+DESCRIBE `ARMOR`; -- display how we store the ARMOR TABLE
 
 
 CREATE TABLE MOB(
@@ -73,6 +85,7 @@ CREATE TABLE MOB(
 -- `Wears Armor` TINYINT,
 -- `Equips Weapon` TINYINT,
 
+
 -- foreign keys
 `Helemts NamingID` VARCHAR(41),
 `Chestplate NamingID` VARCHAR(41),
@@ -80,6 +93,9 @@ CREATE TABLE MOB(
 `Boots NamingID` VARCHAR(41),
 `Weapon NamingID` VARCHAR(41) 
 );
+
+
+
 
 INSERT INTO MOB (`NamingID`, `Name`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Total Resistance`, `Helemts NamingID`, `Chestplate NamingID`, `Leggings NamingID`, `Boots NamingID`, `Weapon NamingID`)
 VALUES
@@ -151,36 +167,39 @@ VALUES
 ('zombie_horse', 'Zombie Horse', 15, 3, NULL, 'Can be equipped with armor', 0, NULL, NULL, NULL, NULL, NULL),
 ('zombie_villager', 'Zombie Villager', 20, 3, NULL, 'cured with a golden apple and potion of weakness', 0, NULL, NULL, NULL, NULL, NULL);
 
--- Note: The values for 'Attack Damage' and 'Attack Speed' are set to NULL for certain mobs 
--- because they don't have a consistent attack pattern or damage value. Some mobs have special 
+
+-- Note: The values for 'Attack Damage' and 'Attack Speed' are set to NULL for certain mobs
+-- because they don't have a consistent attack pattern or damage value. Some mobs have special
 -- abilities instead that make them unique.
+
 
 SELECT * FROM `MOB`;
 DESCRIBE `MOB`; -- display how we store the MOB TABLE
 
 
 
+
 CREATE TABLE `POTION`(
     `Potion ID` INT PRIMARY KEY UNIQUE NOT NULL,
-    `Name` VARCHAR( 20 ) UNIQUE NOT NULL,
-    `Health` INT NOT NULL,
-    `Attack Damage` INT , -- assume they are all in maximum damage
-    `Attack Speed` FLOAT,
-    `Special Abilities` VARCHAR(50),
-    `Total Resistance` INT NOT NULL
+    `Name` VARCHAR( 20 ) UNIQUE NOT NULL
 );
 
+
 DESCRIBE `POTION`;
+
 
 CREATE TABLE `POTION AFFECT`(
     `Potion ID` INT ,
     `Mob ID` INT NOT NULL
 );
 
-DESCRIBE `POTION AFFECT`;
--- end of Ka Hin 
 
--- --------------------------------malachi 3/1------------------------------------
+DESCRIBE `POTION AFFECT`;
+-- end of Ka Hin
+
+
+-- ------------------------------malachi3/1------------------------------------
+
 
 CREATE TABLE `WEAPON`(
     `WeaponID` INT PRIMARY KEY UNIQUE NOT NULL ,
@@ -191,7 +210,7 @@ CREATE TABLE `WEAPON`(
                     'Wooden Axe', 'Stone Axe', 'Iron Axe', 'Gold Axe', 'Diamond Axe', 'Netherite Axe'
                     'Wooden Pickaxe', 'Stone Pickaxe', 'Iron Pickaxe', 'Gold Pickaxe', 'Diamond Pickaxe', 'Netherite Pickaxe'
                     )) ,
-	`MaterialType` VARCHAR(10) NOT NULL,
+    `MaterialType` VARCHAR(10) NOT NULL,
     CONSTRAINT chk_Material_Type CHECK ( `MaterialType` IN ('Wooden', 'Stone', 'Iron', 'Gold', 'Diamond', 'Netherite')),
     `WeaponType` VARCHAR(10) NOT NULL,
     CONSTRAINT chk_Weapon_Type CHECK ( `WeaponType` IN ('Shovel', 'Hoe', 'Sword', 'Axe', 'Pickaxe')),
@@ -202,25 +221,29 @@ CREATE TABLE `WEAPON`(
     `reload time` INT NOT NULL
 );
 
--- CREATE TABLE `Material`(
---     `MaterialID` INT PRIMARY KEY NOT NULL,
---     `Name` VARCHAR(`*EMPTY*`, `Stick`, `Oak Plank`, `Cobblestone`, `Iron Ingot`, `Gold Ingot`, `Diamond`, `Netherite Ingot`, `String`)
--- );
 
--- CREATE TABLE `Recipe`(
---     `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL --takes in reference key from `WEAPON` how?
---     `Material1` VARCHAR(Material.MaterialID)    -- is set to be a materialID 
---     `Material2` VARCHAR(Material.MaterialID)
---     `Material3` VARCHAR(Material.MaterialID)
---     `Material4` VARCHAR(Material.MaterialID)
---     `Material5` VARCHAR(Material.MaterialID)
---     `Material6` VARCHAR(Material.MaterialID)
---     `Material7` VARCHAR(Material.MaterialID)
---     `Material8` VARCHAR(Material.MaterialID)
---     `Material9` VARCHAR(Material.MaterialID)
--- );
+CREATE TABLE `Material`(
+    `MaterialID` INT PRIMARY KEY NOT NULL,
+    `Name` VARCHAR(41) CHECK( `Name` IN ('*EMPTY*', 'Stick', 'Oak Plank', 'Cobblestone', 
+    'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'String'))
+);
 
--- -------------------------------- end of malachi ------------------------------------
+
+CREATE TABLE `Recipe`(
+    `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL, -- takes in reference key from `WEAPON` how?
+    `Material1` VARCHAR(41),    -- is set to be a materialID
+    `Material2` VARCHAR(41),
+    `Material3` VARCHAR(41),
+    `Material4` VARCHAR(41),
+    `Material5` VARCHAR(41),
+    `Material6` VARCHAR(41),
+    `Material7` VARCHAR(41),
+    `Material8` VARCHAR(41),
+    `Material9` VARCHAR(41)
+);
+
+
+-- --------------------------- end of malachi -------------------------------
 -- Kris
 CREATE TABLE ENCHANTMENT (
     ENCHANTMENT_ID int UNIQUE PRIMARY KEY,
@@ -249,13 +272,26 @@ CREATE TABLE ENCHANTMENT (
 );
 
 
+
+
 DESCRIBE ENCHANTMENT;
+
+
 
 
 INSERT into ENCHANTMENT values (1,"Armor",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 
--------------------------------- end of Kris ----------------------------------
+
+-- ---------------------------- end of Kris --------------------------------
 DROP DATABASE `MINECRAFT`;
+
+
+
+
+
+
+
+
 
 
 
