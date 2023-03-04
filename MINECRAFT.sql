@@ -66,13 +66,9 @@ INSERT INTO ARMOR VALUES( 'diamond_leggings', 'Diamond Boots', 'Diamond', 429,3,
 INSERT INTO ARMOR VALUES( 'netherite_leggings', 'Netherite Boots', 'Netherite Ingot', 481, 3, 0.1,NULL);
 
 
-
-
 SELECT * FROM ARMOR;
 
-
 DESCRIBE `ARMOR`; -- display how we store the ARMOR TABLE
-
 
 CREATE TABLE MOB(
 `NamingID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL,
@@ -93,8 +89,6 @@ CREATE TABLE MOB(
 `Boots NamingID` VARCHAR(41),
 `Weapon NamingID` VARCHAR(41) 
 );
-
-
 
 
 INSERT INTO MOB (`NamingID`, `Name`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Total Resistance`, `Helemts NamingID`, `Chestplate NamingID`, `Leggings NamingID`, `Boots NamingID`, `Weapon NamingID`)
@@ -167,43 +161,31 @@ VALUES
 ('zombie_horse', 'Zombie Horse', 15, 3, NULL, 'Can be equipped with armor', 0, NULL, NULL, NULL, NULL, NULL),
 ('zombie_villager', 'Zombie Villager', 20, 3, NULL, 'cured with a golden apple and potion of weakness', 0, NULL, NULL, NULL, NULL, NULL);
 
-
 -- Note: The values for 'Attack Damage' and 'Attack Speed' are set to NULL for certain mobs
 -- because they don't have a consistent attack pattern or damage value. Some mobs have special
 -- abilities instead that make them unique.
 
-
 SELECT * FROM `MOB`;
 DESCRIBE `MOB`; -- display how we store the MOB TABLE
-
-
-
 
 CREATE TABLE `POTION`(
     `Potion ID` INT PRIMARY KEY UNIQUE NOT NULL,
     `Name` VARCHAR( 20 ) UNIQUE NOT NULL
 );
-
-
 DESCRIBE `POTION`;
-
-
 CREATE TABLE `POTION AFFECT`(
     `Potion ID` INT ,
     `Mob ID` INT NOT NULL
 );
 
-
 DESCRIBE `POTION AFFECT`;
 -- end of Ka Hin
 
-
 -- ------------------------------malachi3/1------------------------------------
-
-
 CREATE TABLE `WEAPON`(
     `WeaponID` INT PRIMARY KEY UNIQUE NOT NULL ,
-    `Name` VARCHAR( 'Wooden Shovel', 'Stone Shovel', 'Iron Shovel', 'Gold Shovel', 'Diamond Shovel', 'Netherite Shovel'
+    `Name` VARCHAR(50) UNIQUE NOT NULL,
+    CONSTRAINT chk_weapon_name CHECK ( `Name` IN ( 'Wooden Shovel', 'Stone Shovel', 'Iron Shovel', 'Gold Shovel', 'Diamond Shovel', 'Netherite Shovel'
                     'Wooden Hoe', 'Stone Hoe', 'Iron Hoe', 'Gold Hoe', 'Diamond Hoe', 'Netherite Hoe'
                     'Wooden Sword', 'Stone Sword', 'Iron Sword', 'Gold Sword', 'Diamond Sword', 'Netherite Sword'
                     'Wooden Axe', 'Stone Axe', 'Iron Axe', 'Gold Axe', 'Diamond Axe', 'Netherite Axe'
@@ -217,25 +199,16 @@ CREATE TABLE `WEAPON`(
     `durability` INT  NOT NULL,
     `knockback` INT NOT NULL,
     `base damage` INT NOT NULL,
-    `reload time` INT NOT NULL,
-    `enchantment` ENCHANTMENT NOT NULL,
-    ``
+    `reload time` INT NOT NULL
 );
 
-INSERT INTO WEAPON VALUES ()
+-- INSERT INTO WEAPON VALUES ()
 
 CREATE TABLE `Material`(
     `MaterialID` INT PRIMARY KEY NOT NULL,
-    `Name` VARCHAR(`Empty`, `Stick`, `Oak Plank`, `Cobblestone`, `Iron Ingot`, `Gold Ingot`, `Diamond`, `Netherite Ingot`, `String`)
-);
-
-
-CREATE TABLE `Material`(
-    `MaterialID` INT PRIMARY KEY NOT NULL,
-    `Name` VARCHAR(41) CHECK( `Name` IN ('*EMPTY*', 'Stick', 'Oak Plank', 'Cobblestone', 
+    `Name` VARCHAR(41) CHECK( `Name` IN ('*EMPTY*', 'Stick', 'Oak Plank', 'Cobblestone',
     'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'String'))
 );
-
 
 CREATE TABLE `Recipe`(
     `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL, -- takes in reference key from `WEAPON` how?
@@ -249,10 +222,6 @@ CREATE TABLE `Recipe`(
     `Material8` VARCHAR(41),
     `Material9` VARCHAR(41)
 );
---takes in reference key from `WEAPON` how will this be done??
-INSERT INTO 
-
-
 -- --------------------------- end of malachi -------------------------------
 -- Kris
 CREATE TABLE ENCHANTMENT (
@@ -280,29 +249,8 @@ CREATE TABLE ENCHANTMENT (
     IMAPLING bool,
     RIPTIDE int CHECK (RIPTIDE <= 3 AND RIPTIDE >= 0)
 );
-
-
-
-
 DESCRIBE ENCHANTMENT;
 
-
-
-
 INSERT into ENCHANTMENT values (1,"Armor",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
-
-
 -- ---------------------------- end of Kris --------------------------------
 DROP DATABASE `MINECRAFT`;
-
-
-
-
-
-
-
-
-
-
-
-
