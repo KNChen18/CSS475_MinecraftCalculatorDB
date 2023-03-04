@@ -70,13 +70,90 @@ CREATE TABLE MOB(
 `Attack Speed` INT,
 `Special Abilities` VARCHAR(50), -- temporary set to 50 words
 `Total Resistance` INT,
-`Wears Armor` TINYINT,
-`Equips Weapon` TINYINT,
-`ARMOR ID` INT  UNIQUE NOT NULL,
-`WEAPON ID` INT UNIQUE NOT NULL
--- ARMOR ID and WEAPON are foreign key
+-- `Wears Armor` TINYINT,
+-- `Equips Weapon` TINYINT,
+
+-- foreign keys
+`Helemts NamingID` VARCHAR(41),
+`Chestplate NamingID` VARCHAR(41),
+`Leggings NamingID` VARCHAR(41),
+`Boots NamingID` VARCHAR(41),
+`Weapon NamingID` VARCHAR(41) 
 );
 
+INSERT INTO MOB (`NamingID`, `Name`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Total Resistance`, `Helemts NamingID`, `Chestplate NamingID`, `Leggings NamingID`, `Boots NamingID`, `Weapon NamingID`)
+VALUES
+('bat', 'Bat', 6, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
+('bee', 'Bee', 10, 2, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
+('blaze', 'Blaze', 20, 6, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
+('cat', 'Cat', 10, 3, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
+('cave_spider', 'Cave Spider', 12, 2, NULL, 'Poison', 0, NULL, NULL, NULL, NULL, NULL),
+('chicken', 'Chicken', 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
+('cod', 'Cod', 3, 2, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
+('cow', 'Cow', 10, 2, NULL, 'Milk', 0, NULL, NULL, NULL, NULL, NULL),
+('creeper', 'Creeper', 20, 6, NULL, 'Explodes', 0, NULL, NULL, NULL, NULL, NULL),
+('dolphin', 'Dolphin', 10, 2, NULL, 'Graceful swimmer', 0, NULL, NULL, NULL, NULL, NULL),
+('donkey', 'Donkey', 15, 2, NULL, 'Can be equipped with chest', 0, NULL, NULL, NULL, NULL, NULL),
+('drowned', 'Drowned', 20, 3, NULL, 'Immune to drowning', 0, NULL, NULL, NULL, NULL, NULL),
+('elder_guardian', 'Elder Guardian', 80, 8, NULL, 'Squirts water', 0, NULL, NULL, NULL, NULL, NULL),
+('ender_dragon', 'Ender Dragon', 200, 12, NULL, 'Breathes dragon breath', 0, NULL, NULL, NULL, NULL, NULL),
+('enderman', 'Enderman', 40, 7, NULL, 'Teleports', 0, NULL, NULL, NULL, NULL, NULL),
+('endermite', 'Endermite', 8, 2, NULL, 'Teleports', 0, NULL, NULL, NULL, NULL, NULL),
+('evoker', 'Evoker', 24, 6, NULL, 'Summons vexes', 0, NULL, NULL, NULL, NULL, NULL),
+('fox', 'Fox', 10, 2, NULL, 'Can pick up items', 0, NULL, NULL, NULL, NULL, NULL),
+('ghast', 'Ghast', 10, 5, NULL, 'Shoots fireballs', 0, NULL, NULL, NULL, NULL, NULL),
+('giant', 'Giant', 100, 7, NULL, 'Too big to fit in a 2-block tall space', 0, NULL, NULL, NULL, NULL, NULL),
+('guardian', 'Guardian', 30, 6, NULL, 'Squirts water', 0, NULL, NULL, NULL, NULL, NULL),
+('horse', 'Horse', 15, 2, NULL, 'Can be equipped with armor', 0, NULL, NULL, NULL, NULL, NULL),
+('husk', 'Husk', 20, 3, NULL, 'Immune to drowning', 0, NULL, NULL, NULL, NULL, NULL),
+('illusioner', 'Illusioner', 32, 4, NULL, 'Creates illusions', 0, NULL, NULL, NULL, NULL, NULL),
+('iron_golem', 'Iron Golem', 100, 7, NULL, 'Neutral towards players unless provoked', 0, NULL, NULL, NULL, NULL, NULL),
+('killer_bunny', 'Killer Bunny', 10, 8, NULL, 'Deals massive damage', 0, NULL, NULL, NULL, NULL, NULL),
+('llama', 'Llama', 15, 2, NULL, 'Can be equipped with chest', 0, NULL, NULL, NULL, NULL, NULL),
+('magma_cube', 'Magma Cube', 16, 3, NULL, 'Deals fire damage', 0, NULL, NULL, NULL, NULL, NULL),
+('mooshroom', 'Mooshroom', 10, 2, NULL, 'Drops mushrooms', 0, NULL, NULL, NULL, NULL, NULL),
+('mule', 'Mule', 15, 2, NULL, 'Can be equipped with chest', 0, NULL, NULL, NULL, NULL, NULL),
+('ocelot', 'Ocelot', 10, 3, NULL, 'Can be tamed with fish', 0, NULL, NULL, NULL, NULL, NULL),
+('panda', 'Panda', 20, 6, NULL, 'Rolls and sits', 0, NULL, NULL, NULL, NULL, NULL),
+('parrot', 'Parrot', 6, NULL, NULL, 'Can imitate nearby mobs', 0, NULL, NULL, NULL, NULL, NULL),
+('phantom', 'Phantom', 20, 6, NULL, 'Flies through blocks', 0, NULL, NULL, NULL, NULL, NULL),
+('pig', 'Pig', 10, 2, NULL, 'Drops porkchops', 0, NULL, NULL, NULL, NULL, NULL),
+('piglin', 'Piglin', 16, 5, NULL, 'Hostile towards players unless wearing gold armor', 0, NULL, NULL, NULL, NULL, NULL),
+('piglin_brute', 'Piglin Brute', 50, 9, NULL, 'Immune to knockback', 0, NULL, NULL, NULL, NULL, NULL),
+('pillager', 'Pillager', 24, 6, NULL, 'Shoots arrows', 0, NULL, NULL, NULL, NULL, NULL),
+('polar_bear', 'Polar Bear', 30, 6, NULL, 'Can stand on two legs', 0, NULL, NULL, NULL, NULL, NULL),
+('pufferfish', 'Pufferfish', 3, 3, NULL, 'Inflates when threatened', 0, NULL, NULL, NULL, NULL, NULL),
+('rabbit', 'Rabbit', 3, NULL, NULL, 'Can jump high', 0, NULL, NULL, NULL, NULL, NULL),
+('ravager', 'Ravager', 100, 12, NULL, 'Can break blocks', 0, NULL, NULL, NULL, NULL, NULL),
+('salmon', 'Salmon', 3, 2, NULL, 'Swims upstream to spawn', 0, NULL, NULL, NULL, NULL, NULL),
+('sheep', 'Sheep', 8, 2, NULL, 'Drops wool', 0, NULL, NULL, NULL, NULL, NULL),
+('shulker', 'Shulker', 30, 5, NULL, 'Teleports and hides in its shell', 0, NULL, NULL, NULL, NULL, NULL),
+('silverfish', 'Silverfish', 8, 1, NULL, 'Calls for reinforcements', 0, NULL, NULL, NULL, NULL, NULL),
+('skeleton', 'Skeleton', 20, 4, NULL, 'Shoots arrows', 0, NULL, NULL, NULL, NULL, NULL),
+('skeleton_horse', 'Skeleton Horse', 15, 4, NULL, 'Can be equipped with armor', 0, NULL, NULL, NULL, NULL, NULL),
+('slime', 'Slime', 16, 2, NULL, 'Splits into smaller slimes', 0, NULL, NULL, NULL, NULL, NULL),
+('snow_golem', 'Snow Golem', 4, 0, NULL, 'Throws snowballs', 0, NULL, NULL, NULL, NULL, NULL),
+('spider', 'Spider', 16, 2, NULL, 'Can climb walls', 0, NULL, NULL, NULL, NULL, NULL),
+('squid', 'Squid', 10, NULL, NULL, 'Can swim quickly', 0, NULL, NULL, NULL, NULL, NULL),
+('stray', 'Stray', 20, 4, NULL, 'Shoots arrows and slows movement', 0, NULL, NULL, NULL, NULL, NULL),
+('tropical_fish', 'Tropical Fish', 3, 1, NULL, 'Comes in many different colors', 0, NULL, NULL, NULL, NULL, NULL),
+('turtle', 'Turtle', 30, NULL, NULL, 'Can be bred with seagrass', 0, NULL, NULL, NULL, NULL, NULL),
+('vex', 'Vex', 14, 4, NULL, 'Phases through blocks', 0, NULL, NULL, NULL, NULL, NULL),
+('villager', 'Villager', 20, NULL, NULL, 'Can trade with players', 0, NULL, NULL, NULL, NULL, NULL),
+('vindicator', 'Vindicator', 24, 6, NULL, 'Deals high damage', 0, NULL, NULL, NULL, NULL, NULL),
+('wandering_trader', 'Wandering Trader', 20, NULL, NULL, 'Sells rare items', 0, NULL, NULL, NULL, NULL, NULL),
+('witch', 'Witch', 26, NULL, NULL, 'Throws potions', 0, NULL, NULL, NULL, NULL, NULL),
+('wither', 'Wither', 300, 12, NULL, 'Summons wither skeletons and shoots wither skulls', 0, NULL, NULL, NULL, NULL, NULL),
+('wither_skeleton', 'Wither Skeleton', 20, 5, NULL, 'Inflicts wither effect on attacks', 0, NULL, NULL, NULL, NULL, NULL),
+('wolf', 'Wolf', 8, 4, NULL, 'Can be tamed with bones', 0, NULL, NULL, NULL, NULL, NULL),
+('zoglin', 'Zoglin', 40, 6, NULL, 'Immune to fire and cannot be bred', 0, NULL, NULL, NULL, NULL, NULL),
+('zombie', 'Zombie', 20, 3, NULL, 'Infects villagers and other mobs', 0, NULL, NULL, NULL, NULL, NULL),
+('zombie_horse', 'Zombie Horse', 15, 3, NULL, 'Can be equipped with armor', 0, NULL, NULL, NULL, NULL, NULL),
+('zombie_villager', 'Zombie Villager', 20, 3, NULL, 'cured with a golden apple and potion of weakness', 0, NULL, NULL, NULL, NULL, NULL);
+
+-- Note: The values for 'Attack Damage' and 'Attack Speed' are set to NULL for certain mobs 
+-- because they don't have a consistent attack pattern or damage value. Some mobs have special 
+-- abilities instead that make them unique.
 
 SELECT * FROM `MOB`;
 DESCRIBE `MOB`; -- display how we store the MOB TABLE
