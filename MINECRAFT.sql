@@ -105,22 +105,25 @@ DESCRIBE `POTION AFFECT`;
 
 -- --------------------------------malachi 3/1------------------------------------
 
--- CREATE TABLE `WEAPON`(
---     `WeaponID` INT PRIMARY KEY UNIQUE NOT NULL ,
---     `Name` VARCHAR( 'Wooden Shovel', 'Stone Shovel', 'Iron Shovel', 'Gold Shovel', 'Diamond Shovel', 'Netherite Shovel'
---                     'Wooden Hoe', 'Stone Hoe', 'Iron Hoe', 'Gold Hoe', 'Diamond Hoe', 'Netherite Hoe'
---                     'Wooden Sword', 'Stone Sword', 'Iron Sword', 'Gold Sword', 'Diamond Sword', 'Netherite Sword'
---                     'Wooden Axe', 'Stone Axe', 'Iron Axe', 'Gold Axe', 'Diamond Axe', 'Netherite Axe'
---                     'Wooden Pickaxe', 'Stone Pickaxe', 'Iron Pickaxe', 'Gold Pickaxe', 'Diamond Pickaxe', 'Netherite Pickaxe'
---                     ) UNIQUE NOT NULL,
--- 	`MaterialType` VARCHAR('Wooden', 'Stone', 'Iron', 'Gold', 'Diamond', 'Netherite') NOT NULL,
---     `WeaponType` VARCHAR('Shovel', 'Hoe', 'Sword', 'Axe', 'Pickaxe') NOT NULL,
---     `WeaponRecipe` RECIPE
---     `durability` INT  NOT NULL,
---     `knockback` INT NOT NULL,
---     `base damage` INT NOT NULL,
---     `reload time` INT NOT NULL,
--- );
+CREATE TABLE `WEAPON`(
+    `WeaponID` INT PRIMARY KEY UNIQUE NOT NULL ,
+    `Name` VARCHAR(50) UNIQUE NOT NULL,
+    CONSTRAINT chk_weapon_name CHECK ( `Name` IN ( 'Wooden Shovel', 'Stone Shovel', 'Iron Shovel', 'Gold Shovel', 'Diamond Shovel', 'Netherite Shovel'
+                    'Wooden Hoe', 'Stone Hoe', 'Iron Hoe', 'Gold Hoe', 'Diamond Hoe', 'Netherite Hoe'
+                    'Wooden Sword', 'Stone Sword', 'Iron Sword', 'Gold Sword', 'Diamond Sword', 'Netherite Sword'
+                    'Wooden Axe', 'Stone Axe', 'Iron Axe', 'Gold Axe', 'Diamond Axe', 'Netherite Axe'
+                    'Wooden Pickaxe', 'Stone Pickaxe', 'Iron Pickaxe', 'Gold Pickaxe', 'Diamond Pickaxe', 'Netherite Pickaxe'
+                    )) ,
+	`MaterialType` VARCHAR(10) NOT NULL,
+    CONSTRAINT chk_Material_Type CHECK ( `MaterialType` IN ('Wooden', 'Stone', 'Iron', 'Gold', 'Diamond', 'Netherite')),
+    `WeaponType` VARCHAR(10) NOT NULL,
+    CONSTRAINT chk_Weapon_Type CHECK ( `WeaponType` IN ('Shovel', 'Hoe', 'Sword', 'Axe', 'Pickaxe')),
+    -- `WeaponRecipe` RECIPE
+    `durability` INT  NOT NULL,
+    `knockback` INT NOT NULL,
+    `base damage` INT NOT NULL,
+    `reload time` INT NOT NULL
+);
 
 -- CREATE TABLE `Material`(
 --     `MaterialID` INT PRIMARY KEY NOT NULL,
