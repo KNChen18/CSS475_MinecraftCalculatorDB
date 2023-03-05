@@ -160,41 +160,51 @@ DESCRIBE MOB; -- display how we store the MOB TABLE
 
 CREATE TABLE POTION (
   `Potion_id` INT NOT NULL UNIQUE PRIMARY KEY,
-  `name` VARCHAR(50) NOT NULL,
+  `name` VARCHAR(100) NOT NULL,
   `duration` INT NOT NULL,
-  `level` INT NOT NULL,
-  `effects` VARCHAR(255) NOT NULL
+  `level` VARCHAR(2) NOT NULL CHECK( `level` IN ( 'I','II','III','IV','V' )),
+  `effects` VARCHAR(100) NOT NULL
 );
 DESCRIBE POTION;
 
-INSERT INTO POTION (`Potion_id`, `name`, `duration`, `level`, `effects`) VALUES
-(1, 'Swiftness', 3600, 0, 'speed:1'),
-(2, 'Swiftness', 1800, 1, 'speed:2'),
-(3, 'Swiftness', 960, 2, 'speed:3'),
-(4, 'Fire Resistance', 3600, 0, 'fire_resistance:1'),
-(5, 'Water Breathing', 3600, 0, 'water_breathing:1'),
-(6, 'Invisibility', 960, 0, 'invisibility:1'),
-(7, 'Night Vision', 960, 0, 'night_vision:1'),
-(8, 'Regeneration', 450, 0, 'regeneration:1'),
-(9, 'Regeneration', 225, 1, 'regeneration:2'),
-(10, 'Regeneration', 112, 2, 'regeneration:3'),
-(11, 'Strength', 3600, 0, 'strength:1'),
-(12, 'Strength', 1800, 1, 'strength:2'),
-(13, 'Strength', 960, 2, 'strength:3'),
-(14, 'Weakness', 1800, 0, 'weakness:1'),
-(15, 'Poison', 450, 0, 'poison:1'),
-(16, 'Poison', 225, 1, 'poison:2'),
-(17, 'Poison', 112, 2, 'poison:3'),
-(18, 'Harming', 0, 0, 'instant_damage:1'),
-(19, 'Healing', 0, 0, 'instant_health:1'),
-(20, 'Leaping', 3600, 0, 'jump_boost:1'),
-(21, 'Leaping', 1800, 1, 'jump_boost:2'),
-(22, 'Leaping', 960, 2, 'jump_boost:3'),
-(23, 'Slow Falling', 1800, 0, 'slow_falling:1'),
-(24, 'Turtle Master', 800, 0, 'resistance:3,slow:4'),
-(25, 'Turtle Master', 2400, 1, 'resistance:4,slow:4'),
-(26, 'Water Breathing', 2400, 0, 'water_breathing:1'),
-(27, 'Luck', 6000, 0, 'luck:1');
+INSERT INTO POTION (Potion_id, name, duration, level, effects)
+VALUES
+(1, 'Potion of Regeneration', 45, 'I', 'Restores health over time'),
+(2, 'Potion of Swiftness', 180, 'I', 'Increases movement speed'),
+(3, 'Potion of Fire Resistance', 180, 'I', 'Grants immunity to fire and lava'),
+(4, 'Potion of Poison', 45, 'I', 'Deals damage over time'),
+(5, 'Potion of Healing', 0, 'I', 'Restores a large amount of health instantly'),
+(6, 'Potion of Night Vision', 180, 'I', 'Allows the player to see in the dark'),
+(7, 'Potion of Weakness', 90, 'I', 'Reduces melee damage done by the player'),
+(8, 'Potion of Strength', 180, 'I', 'Increases melee damage done by the player'),
+(9, 'Potion of Slowness', 90, 'I', 'Reduces movement speed and action speed'),
+(10, 'Potion of Leaping', 180, 'I', 'Increases jump height'),
+(11, 'Potion of Harming', 0, 'I', 'Deals a large amount of damage instantly'),
+(12, 'Potion of Water Breathing', 180, 'I', 'Allows the player to breathe underwater'),
+(13, 'Potion of Invisibility', 180, 'I', 'Makes the player invisible to others and mobs'),
+(14, 'Potion of Regeneration II', 22, 'II', 'Restores health over time at a faster rate'),
+(15, 'Potion of Swiftness II', 90, 'II', 'Greatly increases movement speed'),
+(16, 'Potion of Poison II', 22, 'II', 'Deals more damage over time'),
+(17, 'Potion of Healing II', 0, 'II', 'Restores a larger amount of health instantly'),
+(18, 'Potion of Strength II', 90, 'II', 'Greatly increases melee damage done by the player'),
+(19, 'Potion of Leaping II', 90, 'II', 'Greatly increases jump height'),
+(20, 'Potion of Regeneration extended', 120, 'I', 'Restores health over a longer period of time'),
+(21, 'Potion of Swiftness extended', 480, 'I', 'Increases movement speed for a longer period of time'),
+(22, 'Potion of Fire Resistance extended', 480, 'I', 'Grants immunity to fire and lava for a longer period of time'),
+(23, 'Potion of Poison extended', 120, 'I', 'Deals damage over time for a longer period of time'),
+(24, 'Potion of Night Vision extended', 480, 'I', 'Allows the player to see in the dark for a longer period of time'),
+(25, 'Potion of Weakness extended', 240, 'I', 'Reduces melee damage done by the player for a longer period of time'),
+(26, 'Potion of Strength extended', 480, 'I', 'Increases melee damage done by the player for a longer period of time'),
+(27, 'Potion of Slowness extended', 240, 'I', 'Reduces movement speed and action speed for a longer period of time'),
+(28, 'Potion of Leaping extended', 480, 'I', 'Increases jump height for a longer time'),
+(29, 'Potion of Water Breathing extended', 480, 'I', 'Allows breathing underwater for longer time'),
+(30, 'Potion of Invisibility extended', 480, 'I', 'Makes player invisible for longer time'),
+(31, 'Potion of Regeneration II extended', 11, 'II', 'Faster health regeneration for longer time'),
+(32, 'Potion of Swiftness II extended', 240, 'II', 'Increases movement speed for longer time'),
+(33, 'Potion of Poison II extended', 11, 'II', 'Deals more damage over time'),
+(34, 'Potion of Healing II extended', 0, 'II', 'Restores more health for longer time'),
+(35, 'Potion of Strength II extended', 240, 'II', 'Increases melee damage over time'),
+(36, 'Potion of Leaping II extended', 240, 'II', 'Increases jump height for longer time');
 
 SELECT * FROM `potion`;
 
