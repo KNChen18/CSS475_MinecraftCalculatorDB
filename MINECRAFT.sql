@@ -195,14 +195,45 @@ CREATE TABLE `WEAPON`(
     CONSTRAINT chk_Material_Type CHECK ( `MaterialType` IN ('Wooden', 'Stone', 'Iron', 'Gold', 'Diamond', 'Netherite')),
     `WeaponType` VARCHAR(10) NOT NULL,
     CONSTRAINT chk_Weapon_Type CHECK ( `WeaponType` IN ('Shovel', 'Hoe', 'Sword', 'Axe', 'Pickaxe')),
-    -- `WeaponRecipe` RECIPE
     `durability` INT  NOT NULL,
-    `knockback` INT NOT NULL,
-    `base damage` INT NOT NULL,
-    `reload time` INT NOT NULL
+    `knockback` FLOAT NOT NULL,
+    `base damage` FLOAT NOT NULL,
+    `reload time` FLOAT NOT NULL
+    -- `WeaponRecipe` RECIPE
 );
 
--- INSERT INTO WEAPON VALUES ()
+INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
+( 1, 'Wooden Shovel',     'Wooden', 'Shovel',     60,   1, 2.5, 1,    'RECIPE GOES HERE'),
+( 2, 'Wooden Sword',      'Wooden', 'Sword',      60,   1, 4,   1.6,  'RECIPE GOES HERE'),
+( 3, 'Wooden Hoe',        'Wooden', 'Hoe',        60,   1, 1,   1,    'RECIPE GOES HERE'),
+( 4, 'Wooden Axe',        'Wooden', 'Axe',        60,   1, 7,   0.8,  'RECIPE GOES HERE'),
+( 5, 'Wooden Pickaxe',    'Wooden', 'Pickaxe',    60,   1, 2,   1.2,  'RECIPE GOES HERE'),
+( 6, 'Stone Shovel',      'Stone', 'Shovel',      132,  1, 3.5, 1,    'RECIPE GOES HERE'),
+( 7, 'Stone Sword',       'Stone', 'Sword',       132,  1, 5,   1.6,  'RECIPE GOES HERE'),
+( 8, 'Stone Hoe',         'Stone', 'Hoe',         132,  1, 1,   2,    'RECIPE GOES HERE'),
+( 9, 'Stone Axe',         'Stone', 'Axe',         132,  1, 9,   0.8,  'RECIPE GOES HERE'),
+(10, 'Stone Pickaxe',     'Stone', 'Pickaxe',     132,  1, 3,   1.2,  'RECIPE GOES HERE'),
+(11, 'Iron Shovel',       'Iron', 'Shovel',       251,  1, 4.5, 1,    'RECIPE GOES HERE'),
+(12, 'Iron Sword',        'Iron', 'Sword',        251,  1, 6,   1.6,  'RECIPE GOES HERE'),
+(13, 'Iron Hoe',          'Iron', 'Hoe',          251,  1, 1,   3,    'RECIPE GOES HERE'),
+(14, 'Iron Axe',          'Iron', 'Axe',          251,  1, 9,   0.9,  'RECIPE GOES HERE'),
+(15, 'Iron Pickaxe',      'Iron', 'Pickaxe',      251,  1, 4,   1.2,  'RECIPE GOES HERE'),
+(16, 'Gold Shovel',       'Gold', 'Shovel',       33,   1, 2.5, 1,    'RECIPE GOES HERE'),
+(17, 'Gold Sword',        'Gold', 'Sword',        33,   1, 4,   1.6,  'RECIPE GOES HERE'),
+(18, 'Gold Hoe',          'Gold', 'Hoe',          33,   1, 1,   1,    'RECIPE GOES HERE'),
+(19, 'Gold Axe',          'Gold', 'Axe',          33,   1, 7,   1,    'RECIPE GOES HERE'),
+(20, 'Gold Pickaxe',      'Gold', 'Pickaxe',      33,   1, 2,   1.2,  'RECIPE GOES HERE'),
+(21, 'Diamond Shovel',    'Diamond', 'Shovel',    1562, 1, 5.5, 1,    'RECIPE GOES HERE'),
+(22, 'Diamond Sword',     'Diamond', 'Sword',     1562, 1, 7,   1.6,  'RECIPE GOES HERE'),
+(23, 'Diamond Hoe',       'Diamond', 'Hoe',       1562, 1, 1,   4,    'RECIPE GOES HERE'),
+(24, 'Diamond Axe',       'Diamond', 'Axe',       1562, 1, 9,   1,    'RECIPE GOES HERE'),
+(25, 'Diamond Pickaxe',   'Diamond', 'Pickaxe',   1562, 1, 5,   1.2,  'RECIPE GOES HERE'),
+(26, 'Netherite Shovel',  'Netherite', 'Shovel',  2032, 1, 6.5, 1,    'RECIPE GOES HERE'),
+(27, 'Netherite Sword',   'Netherite', 'Sword',   2032, 1, 8,   1.6,  'RECIPE GOES HERE'),
+(28, 'Netherite Hoe',     'Netherite', 'Hoe',     2032, 1, 1,   4,    'RECIPE GOES HERE'),
+(29, 'Netherite Axe',     'Netherite', 'Axe',     2032, 1, 10,  1,    'RECIPE GOES HERE'),
+(30, 'Netherite Pickaxe', 'Netherite', 'Pickaxe', 2032, 1, 6,   1.2,  'RECIPE GOES HERE');
+
 
 CREATE TABLE `Material`(
     `MaterialID` VARCHAR(41) PRIMARY KEY NOT NULL,
