@@ -12,7 +12,7 @@ USE `MINECRAFT`;
 
 -- Ka Hin
 -- Note: It is just initalizing my part
-CREATE TABLE `ARMOR`(
+CREATE TABLE ARMOR(
    `NamingID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL ,
    `Name` VARCHAR(41) UNIQUE NOT NULL,
    `Material` VARCHAR(41) NOT NULL,
@@ -68,7 +68,7 @@ INSERT INTO ARMOR VALUES( 'netherite_leggings', 'Netherite Boots', 'Netherite In
 
 SELECT * FROM ARMOR;
 
-DESCRIBE `ARMOR`; -- display how we store the ARMOR TABLE
+DESCRIBE ARMOR; -- display how we store the ARMOR TABLE
 
 CREATE TABLE MOB(
 `NamingID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL,
@@ -155,14 +155,49 @@ VALUES
 -- because they don't have a consistent attack pattern or damage value. Some mobs have special
 -- abilities instead that make them unique.
 
-SELECT * FROM `MOB`;
-DESCRIBE `MOB`; -- display how we store the MOB TABLE
+SELECT * FROM MOB;
+DESCRIBE MOB; -- display how we store the MOB TABLE
 
-CREATE TABLE `POTION`(
-    `Potion ID` INT PRIMARY KEY UNIQUE NOT NULL,
-    `Name` VARCHAR( 20 ) UNIQUE NOT NULL
+CREATE TABLE POTION (
+  `Potion_id` INT NOT NULL UNIQUE PRIMARY KEY,
+  `name` VARCHAR(50) NOT NULL,
+  `duration` INT NOT NULL,
+  `level` INT NOT NULL,
+  `effects` VARCHAR(255) NOT NULL
 );
-DESCRIBE `POTION`;
+DESCRIBE POTION;
+
+INSERT INTO POTION (`Potion_id`, `name`, `duration`, `level`, `effects`) VALUES
+(1, 'Swiftness', 3600, 0, 'speed:1'),
+(2, 'Swiftness', 1800, 1, 'speed:2'),
+(3, 'Swiftness', 960, 2, 'speed:3'),
+(4, 'Fire Resistance', 3600, 0, 'fire_resistance:1'),
+(5, 'Water Breathing', 3600, 0, 'water_breathing:1'),
+(6, 'Invisibility', 960, 0, 'invisibility:1'),
+(7, 'Night Vision', 960, 0, 'night_vision:1'),
+(8, 'Regeneration', 450, 0, 'regeneration:1'),
+(9, 'Regeneration', 225, 1, 'regeneration:2'),
+(10, 'Regeneration', 112, 2, 'regeneration:3'),
+(11, 'Strength', 3600, 0, 'strength:1'),
+(12, 'Strength', 1800, 1, 'strength:2'),
+(13, 'Strength', 960, 2, 'strength:3'),
+(14, 'Weakness', 1800, 0, 'weakness:1'),
+(15, 'Poison', 450, 0, 'poison:1'),
+(16, 'Poison', 225, 1, 'poison:2'),
+(17, 'Poison', 112, 2, 'poison:3'),
+(18, 'Harming', 0, 0, 'instant_damage:1'),
+(19, 'Healing', 0, 0, 'instant_health:1'),
+(20, 'Leaping', 3600, 0, 'jump_boost:1'),
+(21, 'Leaping', 1800, 1, 'jump_boost:2'),
+(22, 'Leaping', 960, 2, 'jump_boost:3'),
+(23, 'Slow Falling', 1800, 0, 'slow_falling:1'),
+(24, 'Turtle Master', 800, 0, 'resistance:3,slow:4'),
+(25, 'Turtle Master', 2400, 1, 'resistance:4,slow:4'),
+(26, 'Water Breathing', 2400, 0, 'water_breathing:1'),
+(27, 'Luck', 6000, 0, 'luck:1');
+
+SELECT * FROM `potion`;
+
 CREATE TABLE `POTION AFFECT`(
     `Potion ID` INT ,
     `Mob ID` INT NOT NULL
