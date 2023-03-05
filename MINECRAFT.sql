@@ -203,31 +203,37 @@ CREATE TABLE `WEAPON`(
 );
 
 INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
+-- Wooden
 ( 1, 'Wooden Shovel',     'Wooden', 'Shovel',     60,   1, 2.5, 1,    '  1 RECIPE GOES HERE'),
 ( 2, 'Wooden Sword',      'Wooden', 'Sword',      60,   1, 4,   1.6,  '  2 RECIPE GOES HERE'),
 ( 3, 'Wooden Hoe',        'Wooden', 'Hoe',        60,   1, 1,   1,    '  3 RECIPE GOES HERE'),
 ( 4, 'Wooden Axe',        'Wooden', 'Axe',        60,   1, 7,   0.8,  '  4 RECIPE GOES HERE'),
 ( 5, 'Wooden Pickaxe',    'Wooden', 'Pickaxe',    60,   1, 2,   1.2,  '  5 RECIPE GOES HERE'),
+-- Stone
 ( 6, 'Stone Shovel',      'Stone', 'Shovel',      132,  1, 3.5, 1,    '  6 RECIPE GOES HERE'),
 ( 7, 'Stone Sword',       'Stone', 'Sword',       132,  1, 5,   1.6,  '  7 RECIPE GOES HERE'),
 ( 8, 'Stone Hoe',         'Stone', 'Hoe',         132,  1, 1,   2,    '  8 RECIPE GOES HERE'),
 ( 9, 'Stone Axe',         'Stone', 'Axe',         132,  1, 9,   0.8,  '  9 RECIPE GOES HERE'),
 (10, 'Stone Pickaxe',     'Stone', 'Pickaxe',     132,  1, 3,   1.2,  ' 10 RECIPE GOES HERE'),
+-- Iron
 (11, 'Iron Shovel',       'Iron', 'Shovel',       251,  1, 4.5, 1,    ' 11 RECIPE GOES HERE'),
 (12, 'Iron Sword',        'Iron', 'Sword',        251,  1, 6,   1.6,  ' 12 RECIPE GOES HERE'),
 (13, 'Iron Hoe',          'Iron', 'Hoe',          251,  1, 1,   3,    ' 13 RECIPE GOES HERE'),
 (14, 'Iron Axe',          'Iron', 'Axe',          251,  1, 9,   0.9,  ' 14 RECIPE GOES HERE'),
 (15, 'Iron Pickaxe',      'Iron', 'Pickaxe',      251,  1, 4,   1.2,  ' 15 RECIPE GOES HERE'),
+-- Gold
 (16, 'Gold Shovel',       'Gold', 'Shovel',       33,   1, 2.5, 1,    ' 16 RECIPE GOES HERE'),
 (17, 'Gold Sword',        'Gold', 'Sword',        33,   1, 4,   1.6,  ' 17 RECIPE GOES HERE'),
 (18, 'Gold Hoe',          'Gold', 'Hoe',          33,   1, 1,   1,    ' 18 RECIPE GOES HERE'),
 (19, 'Gold Axe',          'Gold', 'Axe',          33,   1, 7,   1,    ' 19 RECIPE GOES HERE'),
 (20, 'Gold Pickaxe',      'Gold', 'Pickaxe',      33,   1, 2,   1.2,  ' 20 RECIPE GOES HERE'),
+-- Diamond
 (21, 'Diamond Shovel',    'Diamond', 'Shovel',    1562, 1, 5.5, 1,    ' 21 RECIPE GOES HERE'),
 (22, 'Diamond Sword',     'Diamond', 'Sword',     1562, 1, 7,   1.6,  ' 22 RECIPE GOES HERE'),
 (23, 'Diamond Hoe',       'Diamond', 'Hoe',       1562, 1, 1,   4,    ' 23 RECIPE GOES HERE'),
 (24, 'Diamond Axe',       'Diamond', 'Axe',       1562, 1, 9,   1,    ' 24 RECIPE GOES HERE'),
 (25, 'Diamond Pickaxe',   'Diamond', 'Pickaxe',   1562, 1, 5,   1.2,  ' 25 RECIPE GOES HERE'),
+-- Netherite
 (26, 'Netherite Shovel',  'Netherite', 'Shovel',  2032, 1, 6.5, 1,    ' 26 RECIPE GOES HERE'),
 (27, 'Netherite Sword',   'Netherite', 'Sword',   2032, 1, 8,   1.6,  ' 27 RECIPE GOES HERE'),
 (28, 'Netherite Hoe',     'Netherite', 'Hoe',     2032, 1, 1,   4,    ' 28 RECIPE GOES HERE'),
@@ -270,35 +276,44 @@ CREATE TABLE `Recipe`(
     `Material9` INT
 );
 
+--our assumptions are that a recipe is not what you need to put in the CRAFTING TABLE per se, but just which items and how much of each you need to create that weapon.
+--this is becasue netherite tools are not crafted, but created in a smithing table.
+
 INSERT INTO Recipe(`RecipeID`, `Output_NamingID`,       `Material1`, `Material2`, `Material3`,
                                                         `Material4`, `Material5`, `Material6`,
                                                         `Material7`, `Material8`, `Material9`)
 VALUES
+-- Wooden
 (1, 1,      0, 2, 0,    0, 1, 0,     0, 1, 0),
 (2, 2,      0, 2, 0,    0, 2, 0,     0, 1, 0),
 (3, 3,      2, 2, 0,    0, 1, 0,     0, 1, 0),
 (4, 4,      2, 2, 0,    2, 1, 0,     0, 1, 0),
 (5, 5,      2, 2, 2,    0, 1, 0,     0, 1, 0),
+-- Stone
 (6, 6,      0, 3, 0,    0, 1, 0,     0, 1, 0),
 (7, 7,      0, 3, 0,    0, 3, 0,     0, 1, 0),
 (8, 8,      3, 3, 0,    0, 1, 0,     0, 1, 0),
 (9, 9,      3, 3, 0,    3, 1, 0,     0, 1, 0),
 (10, 10,    3, 3, 3,    0, 1, 0,     0, 1, 0),
+-- Iron
 (11, 11,    0, 4, 0,    0, 1, 0,     0, 1, 0),
 (12, 12,    0, 4, 0,    0, 4, 0,     0, 1, 0),
 (13, 13,    4, 4, 0,    0, 1, 0,     0, 1, 0),
 (14, 14,    4, 4, 0,    4, 1, 0,     0, 1, 0),
 (15, 15,    4, 4, 4,    0, 1, 0,     0, 1, 0),
+-- Gold
 (16, 16,    0, 5, 0,    0, 1, 0,     0, 1, 0),
 (17, 17,    0, 5, 0,    0, 5, 0,     0, 1, 0),
 (18, 18,    5, 5, 0,    0, 1, 0,     0, 1, 0),
 (19, 19,    5, 5, 0,    5, 1, 0,     0, 1, 0),
 (20, 20,    5, 5, 5,    0, 1, 0,     0, 1, 0),
+--Diamond
 (21, 21,    0, 6, 0,    0, 1, 0,     0, 1, 0),
 (22, 22,    0, 6, 0,    0, 6, 0,     0, 1, 0),
 (23, 23,    6, 6, 0,    0, 1, 0,     0, 1, 0),
 (24, 24,    6, 6, 0,    6, 1, 0,     0, 1, 0),
 (25, 25,    6, 6, 6,    0, 1, 0,     0, 1, 0),
+-- Netherite    (combines diamond tool with a netherite ingot)
 (26, 26,    7, 8, 0,    0, 0, 0,     0, 0, 0),
 (27, 27,    7, 9, 0,    0, 0, 0,     0, 0, 0),
 (28, 28,    7, 10, 0,   0, 0, 0,     0, 0, 0),
