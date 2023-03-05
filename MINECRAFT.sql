@@ -76,90 +76,80 @@ CREATE TABLE MOB(
 `Health` INT NOT NULL,
 `Attack Damage` INT,
 `Attack Speed` INT,
-`Special Abilities` VARCHAR(50), -- temporary set to 50 words
-`Total Resistance` INT,
--- `Wears Armor` TINYINT,
--- `Equips Weapon` TINYINT,
-
-
--- foreign keys
-`Helemts NamingID` VARCHAR(41),
-`Chestplate NamingID` VARCHAR(41),
-`Leggings NamingID` VARCHAR(41),
-`Boots NamingID` VARCHAR(41),
-`Weapon NamingID` VARCHAR(41) 
+`Special Abilities` VARCHAR(50)
 );
 
 
-INSERT INTO MOB (`NamingID`, `Name`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Total Resistance`, `Helemts NamingID`, `Chestplate NamingID`, `Leggings NamingID`, `Boots NamingID`, `Weapon NamingID`)
+INSERT INTO MOB (`NamingID`, `Name`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`)
 VALUES
-('bat', 'Bat', 6, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
-('bee', 'Bee', 10, 2, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
-('blaze', 'Blaze', 20, 6, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
-('cat', 'Cat', 10, 3, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
-('cave_spider', 'Cave Spider', 12, 2, NULL, 'Poison', 0, NULL, NULL, NULL, NULL, NULL),
-('chicken', 'Chicken', 4, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
-('cod', 'Cod', 3, 2, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL),
-('cow', 'Cow', 10, 2, NULL, 'Milk', 0, NULL, NULL, NULL, NULL, NULL),
-('creeper', 'Creeper', 20, 6, NULL, 'Explodes', 0, NULL, NULL, NULL, NULL, NULL),
-('dolphin', 'Dolphin', 10, 2, NULL, 'Graceful swimmer', 0, NULL, NULL, NULL, NULL, NULL),
-('donkey', 'Donkey', 15, 2, NULL, 'Can be equipped with chest', 0, NULL, NULL, NULL, NULL, NULL),
-('drowned', 'Drowned', 20, 3, NULL, 'Immune to drowning', 0, NULL, NULL, NULL, NULL, NULL),
-('elder_guardian', 'Elder Guardian', 80, 8, NULL, 'Squirts water', 0, NULL, NULL, NULL, NULL, NULL),
-('ender_dragon', 'Ender Dragon', 200, 12, NULL, 'Breathes dragon breath', 0, NULL, NULL, NULL, NULL, NULL),
-('enderman', 'Enderman', 40, 7, NULL, 'Teleports', 0, NULL, NULL, NULL, NULL, NULL),
-('endermite', 'Endermite', 8, 2, NULL, 'Teleports', 0, NULL, NULL, NULL, NULL, NULL),
-('evoker', 'Evoker', 24, 6, NULL, 'Summons vexes', 0, NULL, NULL, NULL, NULL, NULL),
-('fox', 'Fox', 10, 2, NULL, 'Can pick up items', 0, NULL, NULL, NULL, NULL, NULL),
-('ghast', 'Ghast', 10, 5, NULL, 'Shoots fireballs', 0, NULL, NULL, NULL, NULL, NULL),
-('giant', 'Giant', 100, 7, NULL, 'Too big to fit in a 2-block tall space', 0, NULL, NULL, NULL, NULL, NULL),
-('guardian', 'Guardian', 30, 6, NULL, 'Squirts water', 0, NULL, NULL, NULL, NULL, NULL),
-('horse', 'Horse', 15, 2, NULL, 'Can be equipped with armor', 0, NULL, NULL, NULL, NULL, NULL),
-('husk', 'Husk', 20, 3, NULL, 'Immune to drowning', 0, NULL, NULL, NULL, NULL, NULL),
-('illusioner', 'Illusioner', 32, 4, NULL, 'Creates illusions', 0, NULL, NULL, NULL, NULL, NULL),
-('iron_golem', 'Iron Golem', 100, 7, NULL, 'Neutral towards players unless provoked', 0, NULL, NULL, NULL, NULL, NULL),
-('killer_bunny', 'Killer Bunny', 10, 8, NULL, 'Deals massive damage', 0, NULL, NULL, NULL, NULL, NULL),
-('llama', 'Llama', 15, 2, NULL, 'Can be equipped with chest', 0, NULL, NULL, NULL, NULL, NULL),
-('magma_cube', 'Magma Cube', 16, 3, NULL, 'Deals fire damage', 0, NULL, NULL, NULL, NULL, NULL),
-('mooshroom', 'Mooshroom', 10, 2, NULL, 'Drops mushrooms', 0, NULL, NULL, NULL, NULL, NULL),
-('mule', 'Mule', 15, 2, NULL, 'Can be equipped with chest', 0, NULL, NULL, NULL, NULL, NULL),
-('ocelot', 'Ocelot', 10, 3, NULL, 'Can be tamed with fish', 0, NULL, NULL, NULL, NULL, NULL),
-('panda', 'Panda', 20, 6, NULL, 'Rolls and sits', 0, NULL, NULL, NULL, NULL, NULL),
-('parrot', 'Parrot', 6, NULL, NULL, 'Can imitate nearby mobs', 0, NULL, NULL, NULL, NULL, NULL),
-('phantom', 'Phantom', 20, 6, NULL, 'Flies through blocks', 0, NULL, NULL, NULL, NULL, NULL),
-('pig', 'Pig', 10, 2, NULL, 'Drops porkchops', 0, NULL, NULL, NULL, NULL, NULL),
-('piglin', 'Piglin', 16, 5, NULL, 'Hostile towards players unless wearing gold armor', 0, NULL, NULL, NULL, NULL, NULL),
-('piglin_brute', 'Piglin Brute', 50, 9, NULL, 'Immune to knockback', 0, NULL, NULL, NULL, NULL, NULL),
-('pillager', 'Pillager', 24, 6, NULL, 'Shoots arrows', 0, NULL, NULL, NULL, NULL, NULL),
-('polar_bear', 'Polar Bear', 30, 6, NULL, 'Can stand on two legs', 0, NULL, NULL, NULL, NULL, NULL),
-('pufferfish', 'Pufferfish', 3, 3, NULL, 'Inflates when threatened', 0, NULL, NULL, NULL, NULL, NULL),
-('rabbit', 'Rabbit', 3, NULL, NULL, 'Can jump high', 0, NULL, NULL, NULL, NULL, NULL),
-('ravager', 'Ravager', 100, 12, NULL, 'Can break blocks', 0, NULL, NULL, NULL, NULL, NULL),
-('salmon', 'Salmon', 3, 2, NULL, 'Swims upstream to spawn', 0, NULL, NULL, NULL, NULL, NULL),
-('sheep', 'Sheep', 8, 2, NULL, 'Drops wool', 0, NULL, NULL, NULL, NULL, NULL),
-('shulker', 'Shulker', 30, 5, NULL, 'Teleports and hides in its shell', 0, NULL, NULL, NULL, NULL, NULL),
-('silverfish', 'Silverfish', 8, 1, NULL, 'Calls for reinforcements', 0, NULL, NULL, NULL, NULL, NULL),
-('skeleton', 'Skeleton', 20, 4, NULL, 'Shoots arrows', 0, NULL, NULL, NULL, NULL, NULL),
-('skeleton_horse', 'Skeleton Horse', 15, 4, NULL, 'Can be equipped with armor', 0, NULL, NULL, NULL, NULL, NULL),
-('slime', 'Slime', 16, 2, NULL, 'Splits into smaller slimes', 0, NULL, NULL, NULL, NULL, NULL),
-('snow_golem', 'Snow Golem', 4, 0, NULL, 'Throws snowballs', 0, NULL, NULL, NULL, NULL, NULL),
-('spider', 'Spider', 16, 2, NULL, 'Can climb walls', 0, NULL, NULL, NULL, NULL, NULL),
-('squid', 'Squid', 10, NULL, NULL, 'Can swim quickly', 0, NULL, NULL, NULL, NULL, NULL),
-('stray', 'Stray', 20, 4, NULL, 'Shoots arrows and slows movement', 0, NULL, NULL, NULL, NULL, NULL),
-('tropical_fish', 'Tropical Fish', 3, 1, NULL, 'Comes in many different colors', 0, NULL, NULL, NULL, NULL, NULL),
-('turtle', 'Turtle', 30, NULL, NULL, 'Can be bred with seagrass', 0, NULL, NULL, NULL, NULL, NULL),
-('vex', 'Vex', 14, 4, NULL, 'Phases through blocks', 0, NULL, NULL, NULL, NULL, NULL),
-('villager', 'Villager', 20, NULL, NULL, 'Can trade with players', 0, NULL, NULL, NULL, NULL, NULL),
-('vindicator', 'Vindicator', 24, 6, NULL, 'Deals high damage', 0, NULL, NULL, NULL, NULL, NULL),
-('wandering_trader', 'Wandering Trader', 20, NULL, NULL, 'Sells rare items', 0, NULL, NULL, NULL, NULL, NULL),
-('witch', 'Witch', 26, NULL, NULL, 'Throws potions', 0, NULL, NULL, NULL, NULL, NULL),
-('wither', 'Wither', 300, 12, NULL, 'Summons wither skeletons and shoots wither skulls', 0, NULL, NULL, NULL, NULL, NULL),
-('wither_skeleton', 'Wither Skeleton', 20, 5, NULL, 'Inflicts wither effect on attacks', 0, NULL, NULL, NULL, NULL, NULL),
-('wolf', 'Wolf', 8, 4, NULL, 'Can be tamed with bones', 0, NULL, NULL, NULL, NULL, NULL),
-('zoglin', 'Zoglin', 40, 6, NULL, 'Immune to fire and cannot be bred', 0, NULL, NULL, NULL, NULL, NULL),
-('zombie', 'Zombie', 20, 3, NULL, 'Infects villagers and other mobs', 0, NULL, NULL, NULL, NULL, NULL),
-('zombie_horse', 'Zombie Horse', 15, 3, NULL, 'Can be equipped with armor', 0, NULL, NULL, NULL, NULL, NULL),
-('zombie_villager', 'Zombie Villager', 20, 3, NULL, 'cured with a golden apple and potion of weakness', 0, NULL, NULL, NULL, NULL, NULL);
+('bat', 'Bat', 6, NULL, NULL, NULL),
+('bee', 'Bee', 10, 2, NULL, NULL),
+('blaze', 'Blaze', 20, 6, NULL, NULL),
+('cat', 'Cat', 10, 3, NULL, NULL),
+('cave_spider', 'Cave Spider', 12, 2, NULL, 'Poison'),
+('chicken', 'Chicken', 4, NULL, NULL, NULL),
+('cod', 'Cod', 3, 2, NULL, NULL),
+('cow', 'Cow', 10, 2, NULL, 'Milk'),
+('creeper', 'Creeper', 20, 6, NULL, 'Explodes'),
+('dolphin', 'Dolphin', 10, 2, NULL, 'Graceful swimmer'),
+('donkey', 'Donkey', 15, 2, NULL, 'Can be equipped with chest'),
+('drowned', 'Drowned', 20, 3, NULL, 'Immune to drowning'),
+('elder_guardian', 'Elder Guardian', 80, 8, NULL, 'Squirts water'),
+('ender_dragon', 'Ender Dragon', 200, 12, NULL, 'Breathes dragon breath'),
+('enderman', 'Enderman', 40, 7, NULL, 'Teleports'),
+('endermite', 'Endermite', 8, 2, NULL, 'Teleports'),
+('evoker', 'Evoker', 24, 6, NULL, 'Summons vexes'),
+('fox', 'Fox', 10, 2, NULL, 'Can pick up items'),
+('ghast', 'Ghast', 10, 5, NULL, 'Shoots fireballs'),
+('giant', 'Giant', 100, 7, NULL, 'Too big to fit in a 2-block tall space'),
+('guardian', 'Guardian', 30, 6, NULL, 'Squirts water'),
+('horse', 'Horse', 15, 2, NULL, 'Can be equipped with armor'),
+('husk', 'Husk', 20, 3, NULL, 'Immune to drowning'),
+('illusioner', 'Illusioner', 32, 4, NULL, 'Creates illusions'),
+('iron_golem', 'Iron Golem', 100, 7, NULL, 'Neutral towards players unless provoked'),
+('killer_bunny', 'Killer Bunny', 10, 8, NULL, 'Deals massive damage'),
+('llama', 'Llama', 15, 2, NULL, 'Can be equipped with chest'),
+('magma_cube', 'Magma Cube', 16, 3, NULL, 'Deals fire damage'),
+('mooshroom', 'Mooshroom', 10, 2, NULL, 'Drops mushrooms'),
+('mule', 'Mule', 15, 2, NULL, 'Can be equipped with chest'),
+('ocelot', 'Ocelot', 10, 3, NULL, 'Can be tamed with fish'),
+('panda', 'Panda', 20, 6, NULL, 'Rolls and sits'),
+('parrot', 'Parrot', 6, NULL, NULL, 'Can imitate nearby mobs'),
+('phantom', 'Phantom', 20, 6, NULL, 'Flies through blocks'),
+('pig', 'Pig', 10, 2, NULL, 'Drops porkchops'),
+('piglin', 'Piglin', 16, 5, NULL, 'Hostile towards players unless wearing gold armor'),
+('piglin_brute', 'Piglin Brute', 50, 9, NULL, 'Immune to knockback'),
+('pillager', 'Pillager', 24, 6, NULL, 'Shoots arrows'),
+('player','Player', 20, 2, 2.5, NULL),
+('polar_bear', 'Polar Bear', 30, 6, NULL, 'Can stand on two legs'),
+('pufferfish', 'Pufferfish', 3, 3, NULL, 'Inflates when threatened'),
+('rabbit', 'Rabbit', 3, NULL, NULL, 'Can jump high'),
+('ravager', 'Ravager', 100, 12, NULL, 'Can break blocks'),
+('salmon', 'Salmon', 3, 2, NULL, 'Swims upstream to spawn'),
+('sheep', 'Sheep', 8, 2, NULL, 'Drops wool'),
+('shulker', 'Shulker', 30, 5, NULL, 'Teleports and hides in its shell'),
+('silverfish', 'Silverfish', 8, 1, NULL, 'Calls for reinforcements'),
+('skeleton', 'Skeleton', 20, 4, NULL, 'Shoots arrows'),
+('skeleton_horse', 'Skeleton Horse', 15, 4, NULL, 'Can be equipped with armor'),
+('slime', 'Slime', 16, 2, NULL, 'Splits into smaller slimes'),
+('snow_golem', 'Snow Golem', 4, 0, NULL, 'Throws snowballs'),
+('spider', 'Spider', 16, 2, NULL, 'Can climb walls'),
+('squid', 'Squid', 10, NULL, NULL, 'Can swim quickly'),
+('stray', 'Stray', 20, 4, NULL, 'Shoots arrows and slows movement'),
+('tropical_fish', 'Tropical Fish', 3, 1, NULL, 'Comes in many different colors'),
+('turtle', 'Turtle', 30, NULL, NULL, 'Can be bred with seagrass'),
+('vex', 'Vex', 14, 4, NULL, 'Phases through blocks'),
+('villager', 'Villager', 20, NULL, NULL, 'Can trade with players'),
+('vindicator', 'Vindicator', 24, 6, NULL, 'Deals high damage'),
+('wandering_trader', 'Wandering Trader', 20, NULL, NULL, 'Sells rare items'),
+('witch', 'Witch', 26, NULL, NULL, 'Throws potions'),
+('wither', 'Wither', 300, 12, NULL, 'Summons wither skeletons and shoots wither skulls'),
+('wither_skeleton', 'Wither Skeleton', 20, 5, NULL, 'Inflicts wither effect on attacks'),
+('wolf', 'Wolf', 8, 4, NULL, 'Can be tamed with bones'),
+('zoglin', 'Zoglin', 40, 6, NULL, 'Immune to fire and cannot be bred'),
+('zombie', 'Zombie', 20, 3, NULL, 'Infects villagers and other mobs'),
+('zombie_horse', 'Zombie Horse', 15, 3, NULL, 'Can be equipped with armor'),
+('zombie_villager', 'Zombie Villager', 20, 3, NULL, 'cured with a golden apple and potion of weakness');
 
 -- Note: The values for 'Attack Damage' and 'Attack Speed' are set to NULL for certain mobs
 -- because they don't have a consistent attack pattern or damage value. Some mobs have special
@@ -202,49 +192,50 @@ CREATE TABLE `WEAPON`(
     -- `WeaponRecipe` RECIPE
 );
 
-INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
--- Wooden
-( 1, 'Wooden Shovel',     'Wooden', 'Shovel',     60,   1, 2.5, 1,    '  1 RECIPE GOES HERE'),
-( 2, 'Wooden Sword',      'Wooden', 'Sword',      60,   1, 4,   1.6,  '  2 RECIPE GOES HERE'),
-( 3, 'Wooden Hoe',        'Wooden', 'Hoe',        60,   1, 1,   1,    '  3 RECIPE GOES HERE'),
-( 4, 'Wooden Axe',        'Wooden', 'Axe',        60,   1, 7,   0.8,  '  4 RECIPE GOES HERE'),
-( 5, 'Wooden Pickaxe',    'Wooden', 'Pickaxe',    60,   1, 2,   1.2,  '  5 RECIPE GOES HERE'),
--- Stone
-( 6, 'Stone Shovel',      'Stone', 'Shovel',      132,  1, 3.5, 1,    '  6 RECIPE GOES HERE'),
-( 7, 'Stone Sword',       'Stone', 'Sword',       132,  1, 5,   1.6,  '  7 RECIPE GOES HERE'),
-( 8, 'Stone Hoe',         'Stone', 'Hoe',         132,  1, 1,   2,    '  8 RECIPE GOES HERE'),
-( 9, 'Stone Axe',         'Stone', 'Axe',         132,  1, 9,   0.8,  '  9 RECIPE GOES HERE'),
-(10, 'Stone Pickaxe',     'Stone', 'Pickaxe',     132,  1, 3,   1.2,  ' 10 RECIPE GOES HERE'),
--- Iron
-(11, 'Iron Shovel',       'Iron', 'Shovel',       251,  1, 4.5, 1,    ' 11 RECIPE GOES HERE'),
-(12, 'Iron Sword',        'Iron', 'Sword',        251,  1, 6,   1.6,  ' 12 RECIPE GOES HERE'),
-(13, 'Iron Hoe',          'Iron', 'Hoe',          251,  1, 1,   3,    ' 13 RECIPE GOES HERE'),
-(14, 'Iron Axe',          'Iron', 'Axe',          251,  1, 9,   0.9,  ' 14 RECIPE GOES HERE'),
-(15, 'Iron Pickaxe',      'Iron', 'Pickaxe',      251,  1, 4,   1.2,  ' 15 RECIPE GOES HERE'),
--- Gold
-(16, 'Gold Shovel',       'Gold', 'Shovel',       33,   1, 2.5, 1,    ' 16 RECIPE GOES HERE'),
-(17, 'Gold Sword',        'Gold', 'Sword',        33,   1, 4,   1.6,  ' 17 RECIPE GOES HERE'),
-(18, 'Gold Hoe',          'Gold', 'Hoe',          33,   1, 1,   1,    ' 18 RECIPE GOES HERE'),
-(19, 'Gold Axe',          'Gold', 'Axe',          33,   1, 7,   1,    ' 19 RECIPE GOES HERE'),
-(20, 'Gold Pickaxe',      'Gold', 'Pickaxe',      33,   1, 2,   1.2,  ' 20 RECIPE GOES HERE'),
--- Diamond
-(21, 'Diamond Shovel',    'Diamond', 'Shovel',    1562, 1, 5.5, 1,    ' 21 RECIPE GOES HERE'),
-(22, 'Diamond Sword',     'Diamond', 'Sword',     1562, 1, 7,   1.6,  ' 22 RECIPE GOES HERE'),
-(23, 'Diamond Hoe',       'Diamond', 'Hoe',       1562, 1, 1,   4,    ' 23 RECIPE GOES HERE'),
-(24, 'Diamond Axe',       'Diamond', 'Axe',       1562, 1, 9,   1,    ' 24 RECIPE GOES HERE'),
-(25, 'Diamond Pickaxe',   'Diamond', 'Pickaxe',   1562, 1, 5,   1.2,  ' 25 RECIPE GOES HERE'),
--- Netherite
-(26, 'Netherite Shovel',  'Netherite', 'Shovel',  2032, 1, 6.5, 1,    ' 26 RECIPE GOES HERE'),
-(27, 'Netherite Sword',   'Netherite', 'Sword',   2032, 1, 8,   1.6,  ' 27 RECIPE GOES HERE'),
-(28, 'Netherite Hoe',     'Netherite', 'Hoe',     2032, 1, 1,   4,    ' 28 RECIPE GOES HERE'),
-(29, 'Netherite Axe',     'Netherite', 'Axe',     2032, 1, 10,  1,    ' 29 RECIPE GOES HERE'),
-(30, 'Netherite Pickaxe', 'Netherite', 'Pickaxe', 2032, 1, 6,   1.2,  ' 30 RECIPE GOES HERE');
+-- INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
+-- -- Wooden
+-- ( 1, 'Wooden Shovel',     'Wooden', 'Shovel',     60,   1, 2.5, 1,    '  1 RECIPE GOES HERE'),
+-- ( 2, 'Wooden Sword',      'Wooden', 'Sword',      60,   1, 4,   1.6,  '  2 RECIPE GOES HERE'),
+-- ( 3, 'Wooden Hoe',        'Wooden', 'Hoe',        60,   1, 1,   1,    '  3 RECIPE GOES HERE'),
+-- ( 4, 'Wooden Axe',        'Wooden', 'Axe',        60,   1, 7,   0.8,  '  4 RECIPE GOES HERE'),
+-- ( 5, 'Wooden Pickaxe',    'Wooden', 'Pickaxe',    60,   1, 2,   1.2,  '  5 RECIPE GOES HERE'),
+-- -- Stone
+-- ( 6, 'Stone Shovel',      'Stone', 'Shovel',      132,  1, 3.5, 1,    '  6 RECIPE GOES HERE'),
+-- ( 7, 'Stone Sword',       'Stone', 'Sword',       132,  1, 5,   1.6,  '  7 RECIPE GOES HERE'),
+-- ( 8, 'Stone Hoe',         'Stone', 'Hoe',         132,  1, 1,   2,    '  8 RECIPE GOES HERE'),
+-- ( 9, 'Stone Axe',         'Stone', 'Axe',         132,  1, 9,   0.8,  '  9 RECIPE GOES HERE'),
+-- (10, 'Stone Pickaxe',     'Stone', 'Pickaxe',     132,  1, 3,   1.2,  ' 10 RECIPE GOES HERE'),
+-- -- Iron
+-- (11, 'Iron Shovel',       'Iron', 'Shovel',       251,  1, 4.5, 1,    ' 11 RECIPE GOES HERE'),
+-- (12, 'Iron Sword',        'Iron', 'Sword',        251,  1, 6,   1.6,  ' 12 RECIPE GOES HERE'),
+-- (13, 'Iron Hoe',          'Iron', 'Hoe',          251,  1, 1,   3,    ' 13 RECIPE GOES HERE'),
+-- (14, 'Iron Axe',          'Iron', 'Axe',          251,  1, 9,   0.9,  ' 14 RECIPE GOES HERE'),
+-- (15, 'Iron Pickaxe',      'Iron', 'Pickaxe',      251,  1, 4,   1.2,  ' 15 RECIPE GOES HERE'),
+-- -- Gold
+-- (16, 'Gold Shovel',       'Gold', 'Shovel',       33,   1, 2.5, 1,    ' 16 RECIPE GOES HERE'),
+-- (17, 'Gold Sword',        'Gold', 'Sword',        33,   1, 4,   1.6,  ' 17 RECIPE GOES HERE'),
+-- (18, 'Gold Hoe',          'Gold', 'Hoe',          33,   1, 1,   1,    ' 18 RECIPE GOES HERE'),
+-- (19, 'Gold Axe',          'Gold', 'Axe',          33,   1, 7,   1,    ' 19 RECIPE GOES HERE'),
+-- (20, 'Gold Pickaxe',      'Gold', 'Pickaxe',      33,   1, 2,   1.2,  ' 20 RECIPE GOES HERE'),
+-- -- Diamond
+-- (21, 'Diamond Shovel',    'Diamond', 'Shovel',    1562, 1, 5.5, 1,    ' 21 RECIPE GOES HERE'),
+-- (22, 'Diamond Sword',     'Diamond', 'Sword',     1562, 1, 7,   1.6,  ' 22 RECIPE GOES HERE'),
+-- (23, 'Diamond Hoe',       'Diamond', 'Hoe',       1562, 1, 1,   4,    ' 23 RECIPE GOES HERE'),
+-- (24, 'Diamond Axe',       'Diamond', 'Axe',       1562, 1, 9,   1,    ' 24 RECIPE GOES HERE'),
+-- (25, 'Diamond Pickaxe',   'Diamond', 'Pickaxe',   1562, 1, 5,   1.2,  ' 25 RECIPE GOES HERE'),
+-- -- Netherite
+-- (26, 'Netherite Shovel',  'Netherite', 'Shovel',  2032, 1, 6.5, 1,    ' 26 RECIPE GOES HERE'),
+-- (27, 'Netherite Sword',   'Netherite', 'Sword',   2032, 1, 8,   1.6,  ' 27 RECIPE GOES HERE'),
+-- (28, 'Netherite Hoe',     'Netherite', 'Hoe',     2032, 1, 1,   4,    ' 28 RECIPE GOES HERE'),
+-- (29, 'Netherite Axe',     'Netherite', 'Axe',     2032, 1, 10,  1,    ' 29 RECIPE GOES HERE'),
+-- (30, 'Netherite Pickaxe', 'Netherite', 'Pickaxe', 2032, 1, 6,   1.2,  ' 30 RECIPE GOES HERE');
 
 
 CREATE TABLE `Material`(
     `MaterialID` INT PRIMARY KEY NOT NULL,
     `Name` VARCHAR(41) CHECK( `Name` IN ('*EMPTY*', 'Stick', 'Oak Plank', 'Cobblestone',
-    'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'String'))
+    'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'Shovel', 'Hoe', 'Sword', 
+    'Axe', 'Pickaxe'))
 );
 
 INSERT INTO Material(`MaterialId`, `Name`) VALUES
@@ -276,8 +267,8 @@ CREATE TABLE `Recipe`(
     `Material9` INT
 );
 
---our assumptions are that a recipe is not what you need to put in the CRAFTING TABLE per se, but just which items and how much of each you need to create that weapon.
---this is becasue netherite tools are not crafted, but created in a smithing table.
+-- our assumptions are that a recipe is not what you need to put in the CRAFTING TABLE per se, but just which items and how much of each you need to create that weapon.
+-- this is becasue netherite tools are not crafted, but created in a smithing table.
 
 INSERT INTO Recipe(`RecipeID`, `Output_NamingID`,       `Material1`, `Material2`, `Material3`,
                                                         `Material4`, `Material5`, `Material6`,
@@ -307,7 +298,7 @@ VALUES
 (18, 18,    5, 5, 0,    0, 1, 0,     0, 1, 0),
 (19, 19,    5, 5, 0,    5, 1, 0,     0, 1, 0),
 (20, 20,    5, 5, 5,    0, 1, 0,     0, 1, 0),
---Diamond
+-- Diamond
 (21, 21,    0, 6, 0,    0, 1, 0,     0, 1, 0),
 (22, 22,    0, 6, 0,    0, 6, 0,     0, 1, 0),
 (23, 23,    6, 6, 0,    0, 1, 0,     0, 1, 0),
