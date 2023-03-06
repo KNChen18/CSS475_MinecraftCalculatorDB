@@ -232,8 +232,8 @@ CREATE TABLE `WEAPON`(
     `durability` INT  NOT NULL,
     `knockback` FLOAT NOT NULL,
     `base damage` FLOAT NOT NULL,
-    `reload time` FLOAT NOT NULL
-    -- `WeaponRecipe` RECIPE
+    `reload time` FLOAT NOT NULL,
+    `WeaponRecipe` RECIPE NOT NULL
 );
 DESCRIBE `WEAPON`;
 
