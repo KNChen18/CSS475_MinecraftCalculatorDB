@@ -18,7 +18,8 @@ CREATE TABLE `ARMOR`(
    `Material Type` VARCHAR(41) NOT NULL,
    `Durability` INT NOT NULL,
    `Defense Points` FLOAT,
-   `Knockback Resistance` FLOAT
+   `Knockback Resistance` FLOAT,
+--    `ARMOR RECIPE` INT
 );
 
 
@@ -298,15 +299,15 @@ INSERT INTO Material(`MaterialId`, `Name`) VALUES
 CREATE TABLE `Recipe`(
     `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL, -- recipe ID is the same as namingID of the item being created 
     `Output_NamingID` INT, -- this is foreign key of the output
-    `Material1` INT,    -- corresponds to a materialID
-    `Material2` INT,
-    `Material3` INT,
-    `Material4` INT,
-    `Material5` INT,
-    `Material6` INT,
-    `Material7` INT,
-    `Material8` INT,
-    `Material9` INT
+    `Material1` INT REFERENCES `Material` ( `MaterialID` ),    -- corresponds to a materialID
+    `Material2` INT REFERENCES `Material` ( `MaterialID` ),
+    `Material3` INT REFERENCES `Material` ( `MaterialID` ),
+    `Material4` INT REFERENCES `Material` ( `MaterialID` ),
+    `Material5` INT REFERENCES `Material` ( `MaterialID` ),
+    `Material6` INT REFERENCES `Material` ( `MaterialID` ),
+    `Material7` INT REFERENCES `Material` ( `MaterialID` ),
+    `Material8` INT REFERENCES `Material` ( `MaterialID` ),
+    `Material9` INT REFERENCES `Material` ( `MaterialID` )
 );
 DESCRIBE `Recipe`;
 
