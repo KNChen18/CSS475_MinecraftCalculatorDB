@@ -18,7 +18,7 @@ CREATE TABLE `ARMOR`(
    `Material Type` VARCHAR(41) NOT NULL,
    `Durability` INT NOT NULL,
    `Defense Points` FLOAT,
-   `Knockback Resistance` FLOAT,
+   `Knockback Resistance` FLOAT
 --    `ARMOR RECIPE` INT
 );
 
