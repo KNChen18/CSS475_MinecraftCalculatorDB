@@ -75,13 +75,13 @@ CREATE TABLE MOB(
 `Health` INT NOT NULL,
 `Attack Damage` INT,
 `Attack Speed` INT,
-`Special Abilities` VARCHAR(50)
+`Special Abilities` VARCHAR(50),
 `Wears Armor` TINYINT NOT NULL,
 `Equip Weapons` TINYINT NOT NULL
 );
 
 
-INSERT INTO MOB (`NamingID`, `Name`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`)
+INSERT INTO MOB (`NamingID`, `Name`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Wears Armor`, `Equip Weapons`)
 VALUES
 ('bat',             'Bat', 6, NULL, NULL, NULL, 0, 0),
 ('bee',             'Bee', 10, 2, NULL, NULL, 0, 0),
@@ -221,10 +221,10 @@ SELECT * FROM `potion`;
 CREATE TABLE `WEAPON`(
     `WeaponID` INT PRIMARY KEY UNIQUE NOT NULL ,
     `Name` VARCHAR(50) UNIQUE NOT NULL,
-    CONSTRAINT chk_weapon_name CHECK ( `Name` IN ( 'Wooden Shovel', 'Stone Shovel', 'Iron Shovel', 'Gold Shovel', 'Diamond Shovel', 'Netherite Shovel'
-                    'Wooden Hoe', 'Stone Hoe', 'Iron Hoe', 'Gold Hoe', 'Diamond Hoe', 'Netherite Hoe'
-                    'Wooden Sword', 'Stone Sword', 'Iron Sword', 'Gold Sword', 'Diamond Sword', 'Netherite Sword'
-                    'Wooden Axe', 'Stone Axe', 'Iron Axe', 'Gold Axe', 'Diamond Axe', 'Netherite Axe'
+    CONSTRAINT chk_weapon_name CHECK ( `Name` IN ( 'Wooden Shovel', 'Stone Shovel', 'Iron Shovel', 'Gold Shovel', 'Diamond Shovel', 'Netherite Shovel',
+                    'Wooden Hoe', 'Stone Hoe', 'Iron Hoe', 'Gold Hoe', 'Diamond Hoe', 'Netherite Hoe',
+                    'Wooden Sword', 'Stone Sword', 'Iron Sword', 'Gold Sword', 'Diamond Sword', 'Netherite Sword',
+                    'Wooden Axe', 'Stone Axe', 'Iron Axe', 'Gold Axe', 'Diamond Axe', 'Netherite Axe',
                     'Wooden Pickaxe', 'Stone Pickaxe', 'Iron Pickaxe', 'Gold Pickaxe', 'Diamond Pickaxe', 'Netherite Pickaxe'
                     )) ,
     `MaterialType` VARCHAR(10) NOT NULL,
@@ -235,7 +235,7 @@ CREATE TABLE `WEAPON`(
     `knockback` FLOAT NOT NULL,
     `base damage` FLOAT NOT NULL,
     `reload time` FLOAT NOT NULL,
-    `WeaponRecipe` RECIPE NOT NULL
+    `WeaponRecipe` INT NOT NULL
 );
 DESCRIBE `WEAPON`;
 
