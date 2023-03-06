@@ -12,7 +12,7 @@ USE `MINECRAFT`;
 
 -- Ka Hin
 -- Note: It is just initalizing my part
-CREATE TABLE ARMOR(
+CREATE TABLE `ARMOR`(
    `NamingID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL ,
    `Name` VARCHAR(41) UNIQUE NOT NULL,
    `Material Type` VARCHAR(41) NOT NULL,
@@ -23,51 +23,51 @@ CREATE TABLE ARMOR(
 
 
 -- Helmets
-INSERT INTO ARMOR VALUES( 'leather_helmet', 'Leather Cap', 'Leather', 55, 1, 0.1);
-INSERT INTO ARMOR VALUES( 'golden_helmet', 'Golden Helmet', 'Gold', 77, 2, 0.1);
-INSERT INTO ARMOR VALUES( 'chainmail_helmet', 'Chainmail Helmet', 'Chainmail', 165, 2, 0.1);
-INSERT INTO ARMOR VALUES( 'iron_helmet', 'Iron Helmet', 'Iron', 165, 2, 0.1);
-INSERT INTO ARMOR VALUES( 'diamond_helmet', 'Diamond Helmet', 'Diamond', 363, 3, 0.1);
-INSERT INTO ARMOR VALUES( 'netherite_helmet', 'Netherite Helmet', 'Netherite Ingot', 407, 3, 0.1);
-INSERT INTO ARMOR VALUES( 'turtle_helmet', 'Turtle Shell', 'Scute', 275, 2, 0.1);
+INSERT INTO `ARMOR` VALUES( 'leather_helmet', 'Leather Cap', 'Leather', 55, 1, 0.1);
+INSERT INTO `ARMOR` VALUES( 'golden_helmet', 'Golden Helmet', 'Gold', 77, 2, 0.1);
+INSERT INTO `ARMOR` VALUES( 'chainmail_helmet', 'Chainmail Helmet', 'Chainmail', 165, 2, 0.1);
+INSERT INTO `ARMOR` VALUES( 'iron_helmet', 'Iron Helmet', 'Iron', 165, 2, 0.1);
+INSERT INTO `ARMOR` VALUES( 'diamond_helmet', 'Diamond Helmet', 'Diamond', 363, 3, 0.1);
+INSERT INTO `ARMOR` VALUES( 'netherite_helmet', 'Netherite Helmet', 'Netherite Ingot', 407, 3, 0.1);
+INSERT INTO `ARMOR` VALUES( 'turtle_helmet', 'Turtle Shell', 'Scute', 275, 2, 0.1);
 
 
 
 
 -- Chestplate
-INSERT INTO ARMOR VALUES( 'leather_chestplate', 'Leather Tunic', 'Leather', 80, 3, 0.1);
-INSERT INTO ARMOR VALUES( 'golden_chestplate', 'Golden Chestplate', 'Gold', 112, 5, 0.1);
-INSERT INTO ARMOR VALUES( 'chainmail_chestplate', 'Chainmail Chestplate', 'Chainmail', 240, 5, 0.1);
-INSERT INTO ARMOR VALUES( 'iron_chestplate', 'Iron Chestplate', 'Iron', 240, 6, 0.1);
-INSERT INTO ARMOR VALUES( 'diamond_chestplate', 'Diamond Chestplate', 'Diamond', 528, 8, 0.1);
-INSERT INTO ARMOR VALUES( 'netherite_chestplate', 'Netherite Chestplate', 'Netherite Ingot', 592, 8, 0.1);
+INSERT INTO `ARMOR` VALUES( 'leather_chestplate', 'Leather Tunic', 'Leather', 80, 3, 0.1);
+INSERT INTO `ARMOR` VALUES( 'golden_chestplate', 'Golden Chestplate', 'Gold', 112, 5, 0.1);
+INSERT INTO `ARMOR` VALUES( 'chainmail_chestplate', 'Chainmail Chestplate', 'Chainmail', 240, 5, 0.1);
+INSERT INTO `ARMOR` VALUES( 'iron_chestplate', 'Iron Chestplate', 'Iron', 240, 6, 0.1);
+INSERT INTO `ARMOR` VALUES( 'diamond_chestplate', 'Diamond Chestplate', 'Diamond', 528, 8, 0.1);
+INSERT INTO `ARMOR` VALUES( 'netherite_chestplate', 'Netherite Chestplate', 'Netherite Ingot', 592, 8, 0.1);
 
 
 
 
 -- leggings
-INSERT INTO ARMOR VALUES( 'leather_boots', 'Leather Pants', 'Leather', 75, 2, 0.1);
-INSERT INTO ARMOR VALUES( 'golden_boots', 'Golden Leggings', 'Gold', 105, 1.5, 0.1);
-INSERT INTO ARMOR VALUES( 'chainmail_boots', 'Chainmail Leggings', 'Chainmail', 225, 4, 0.1);
-INSERT INTO ARMOR VALUES( 'iron_boots', 'Iron Leggings', 'Iron', 225, 5, 0.1);
-INSERT INTO ARMOR VALUES( 'diamond_boots', 'Diamond Leggings', 'Diamond', 495, 6, 0.1);
-INSERT INTO ARMOR VALUES( 'netherite_boots', 'Netherite Leggings', 'Netherite Ingot', 555, 6, 0.1);
+INSERT INTO `ARMOR` VALUES( 'leather_boots', 'Leather Pants', 'Leather', 75, 2, 0.1);
+INSERT INTO `ARMOR` VALUES( 'golden_boots', 'Golden Leggings', 'Gold', 105, 1.5, 0.1);
+INSERT INTO `ARMOR` VALUES( 'chainmail_boots', 'Chainmail Leggings', 'Chainmail', 225, 4, 0.1);
+INSERT INTO `ARMOR` VALUES( 'iron_boots', 'Iron Leggings', 'Iron', 225, 5, 0.1);
+INSERT INTO `ARMOR` VALUES( 'diamond_boots', 'Diamond Leggings', 'Diamond', 495, 6, 0.1);
+INSERT INTO `ARMOR` VALUES( 'netherite_boots', 'Netherite Leggings', 'Netherite Ingot', 555, 6, 0.1);
 
 
 
 
 -- boots
-INSERT INTO ARMOR VALUES( 'leather_leggings', 'Leather Boots', 'Leather', 65, 1, 0.1);
-INSERT INTO ARMOR VALUES( 'golden_leggings', 'Golden Boots', 'Gold', 91, 1, 0.1);
-INSERT INTO ARMOR VALUES( 'chainmail_leggings', 'Chainmail Boots', 'Chainmail', 195, 1, 0.1);
-INSERT INTO ARMOR VALUES( 'iron_leggings', 'Iron Boots', 'Iron', 195, 2, 0.1);
-INSERT INTO ARMOR VALUES( 'diamond_leggings', 'Diamond Boots', 'Diamond', 429,3, 0.1);
-INSERT INTO ARMOR VALUES( 'netherite_leggings', 'Netherite Boots', 'Netherite Ingot', 481, 3, 0.1);
+INSERT INTO `ARMOR` VALUES( 'leather_leggings', 'Leather Boots', 'Leather', 65, 1, 0.1);
+INSERT INTO `ARMOR` VALUES( 'golden_leggings', 'Golden Boots', 'Gold', 91, 1, 0.1);
+INSERT INTO `ARMOR` VALUES( 'chainmail_leggings', 'Chainmail Boots', 'Chainmail', 195, 1, 0.1);
+INSERT INTO `ARMOR` VALUES( 'iron_leggings', 'Iron Boots', 'Iron', 195, 2, 0.1);
+INSERT INTO `ARMOR` VALUES( 'diamond_leggings', 'Diamond Boots', 'Diamond', 429,3, 0.1);
+INSERT INTO `ARMOR` VALUES( 'netherite_leggings', 'Netherite Boots', 'Netherite Ingot', 481, 3, 0.1);
 
 
-SELECT * FROM ARMOR;
+SELECT * FROM `ARMOR`;
 
-DESCRIBE ARMOR; -- display how we store the ARMOR TABLE
+DESCRIBE `ARMOR`; -- display how we store the ARMOR TABLE
 
 CREATE TABLE MOB(
 `NamingID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL,
@@ -159,16 +159,16 @@ VALUES
 SELECT * FROM MOB;
 DESCRIBE MOB; -- display how we store the MOB TABLE
 
-CREATE TABLE POTION (
+CREATE TABLE `POTION` (
   `Potion_id` INT NOT NULL UNIQUE PRIMARY KEY,
   `name` VARCHAR(100) NOT NULL,
   `duration` INT NOT NULL,
   `level` VARCHAR(2) NOT NULL CHECK( `level` IN ( 'I','II','III','IV','V' )),
   `effects` VARCHAR(100) NOT NULL
 );
-DESCRIBE POTION;
+DESCRIBE `POTION`;
 
-INSERT INTO POTION (Potion_id, name, duration, level, effects)
+INSERT INTO `POTION` (Potion_id, name, duration, level, effects)
 VALUES
 (1, 'Potion of Regeneration', 45, 'I', 'Restores health over time'),
 (2, 'Potion of Swiftness', 180, 'I', 'Increases movement speed'),
@@ -209,12 +209,6 @@ VALUES
 
 SELECT * FROM `potion`;
 
--- CREATE TABLE `POTION AFFECT`(
---     `Potion ID` INT ,
---     `Mob ID` INT NOT NULL
--- );
-
--- DESCRIBE `POTION AFFECT`;
 -- end of Ka Hin
 
 -- ------------------------------malachi3/1------------------------------------
@@ -396,7 +390,15 @@ SELECT * FROM `ENCHANTMENTS`;
 
 -- CREATE TABLE `ENCHANTED_ITEMS` ()
 	
-
+CREATE TABLE `MoB_Stats`(
+    `MOBID` VARCHAR(41) UNIQUE NOT NULL REFERENCES `MOB`(`NamingID`),
+    `WeaponID` INT REFERENCE `WEAPON`(`WeaponID`),
+    `Potion_id` INT REFERENCE `POTION` (`Potion_id`),
+    `Hemlet ID` VARCHAR(41) ,
+    `ChestPlate ID` VARCHAR(41) ,
+    `Leggings ID` VARCHAR(41) ,
+    `Boots ID` VARCHAR(41) 
+);
 
 -- ---------------------------- end of Kris --------------------------------
 DROP DATABASE `MINECRAFT`;
