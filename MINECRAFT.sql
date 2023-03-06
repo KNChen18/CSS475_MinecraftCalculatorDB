@@ -277,7 +277,7 @@ CREATE TABLE `Material`(
     `MaterialID` INT PRIMARY KEY NOT NULL,
     `Name` VARCHAR(41) CHECK( `Name` IN ('*EMPTY*', 'Stick', 'Oak Plank', 'Cobblestone',
     'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'Diamond Shovel', 'Diamond Hoe', 'Diamond Sword', 
-    'Diamond Axe', 'Diamond Pickaxe'))
+    'Diamond Axe', 'Diamond Pickaxe', 'Leather'))
 );
 DESCRIBE `Material`;
 
@@ -294,7 +294,8 @@ INSERT INTO Material(`MaterialId`, `Name`) VALUES
 (9, 'Diamond Hoe'),
 (10, 'Diamond Sword'),
 (11, 'Diamond Axe'),
-(12, 'Diamond Pickaxe');
+(12, 'Diamond Pickaxe'),
+(13, 'Leather');
 
 CREATE TABLE `Recipe`(
     `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL, -- recipe ID is the same as namingID of the item being created 
@@ -354,6 +355,9 @@ VALUES
 (28, 28,    7, 10, 0,   0, 0, 0,     0, 0, 0),
 (29, 29,    7, 11, 0,   0, 0, 0,     0, 0, 0),
 (30, 30,    7, 12, 0,   0, 0, 0,     0, 0, 0);
+-- Armor
+(31, 31,    0, 0, 0,   0, 0, 0,     0, 0, 0);
+
 -- -------------------------- end of malachi -------------------------------
 -- Kris--
 CREATE TABLE `ENCHANTMENTS` (
