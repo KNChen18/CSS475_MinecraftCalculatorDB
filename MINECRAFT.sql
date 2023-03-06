@@ -208,12 +208,12 @@ VALUES
 
 SELECT * FROM `potion`;
 
-CREATE TABLE `POTION AFFECT`(
-    `Potion ID` INT ,
-    `Mob ID` INT NOT NULL
-);
+-- CREATE TABLE `POTION AFFECT`(
+--     `Potion ID` INT ,
+--     `Mob ID` INT NOT NULL
+-- );
 
-DESCRIBE `POTION AFFECT`;
+-- DESCRIBE `POTION AFFECT`;
 -- end of Ka Hin
 
 -- ------------------------------malachi3/1------------------------------------
@@ -236,6 +236,7 @@ CREATE TABLE `WEAPON`(
     `reload time` FLOAT NOT NULL
     -- `WeaponRecipe` RECIPE
 );
+DESCRIBE `WEAPON`;
 
 -- INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
 -- -- Wooden
@@ -282,6 +283,7 @@ CREATE TABLE `Material`(
     'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'Shovel', 'Hoe', 'Sword', 
     'Axe', 'Pickaxe'))
 );
+DESCRIBE `Material`;
 
 INSERT INTO Material(`MaterialId`, `Name`) VALUES
 (0, '*EMPTY*'), 
@@ -311,6 +313,7 @@ CREATE TABLE `Recipe`(
     `Material8` INT,
     `Material9` INT
 );
+DESCRIBE `Recipe`;
 
 -- our assumptions are that a recipe is not what you need to put in the CRAFTING TABLE per se, but just which items and how much of each you need to create that weapon.
 -- this is becasue netherite tools are not crafted, but created in a smithing table.
