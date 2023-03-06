@@ -315,7 +315,7 @@ DESCRIBE `Recipe`;
 -- our assumptions are that a recipe is not what you need to put in the CRAFTING TABLE per se, but just which items and how much of each you need to create that weapon.
 -- this is becasue netherite tools are not crafted, but created in a smithing table.
 
-INSERT INTO Recipe(`RecipeID`, `Output_NamingID`,       `Material1`, `Material2`, `Material3`,
+INSERT INTO `Recipe`(`RecipeID`, `Output_NamingID`,       `Material1`, `Material2`, `Material3`,
                                                         `Material4`, `Material5`, `Material6`,
                                                         `Material7`, `Material8`, `Material9`)
 VALUES
@@ -404,15 +404,22 @@ CREATE TABLE `MoB_Stats`(
     `Leggings ID` VARCHAR(41) REFERENCES `ARMOR`(`NamingID`),
     `Boots ID` VARCHAR(41) REFERENCES `ARMOR`(`NamingID`)
 );
+DESCRIBE `MoB_Stats`;
+
+INSERT INTO `MoB_Stats` ( `MOBID`,`WeaponID`,`Potion_id`, `Hemlet ID`, `ChestPlate ID`, 
+`Leggings ID`,`Boots ID` ) VALUES 
+( 'player', NULL, NULL, NULL, NULL, NULL, NULL);
 
 CREATE TABLE `ARMOR_ENCHANTED`(
     `EnchantmentID` INT REFERENCES `ENCHANTMENTS` ( `ENCHANTMENT_ID` ),
     `Armor ID` VARCHAR(41) REFERENCES `ARMOR`(`NamingID`)
 );
+DESCRIBE `ARMOR_ENCHANTED`;
 
 CREATE TABLE `WEAPON_ENCHANTED`(
     `EnchantmentID` INT REFERENCES `ENCHANTMENTS` ( `ENCHANTMENT_ID` ),
     `WeaponID` INT REFERENCES `WEAPON`(`WeaponID`)
 );
+DESCRIBE `WEAPON_ENCHANTED`;
 -- ---------------------------- end of Kris --------------------------------
 DROP DATABASE `MINECRAFT`;
