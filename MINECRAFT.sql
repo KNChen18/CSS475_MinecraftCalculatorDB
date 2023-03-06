@@ -237,43 +237,43 @@ CREATE TABLE `WEAPON`(
 );
 DESCRIBE `WEAPON`;
 
--- INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
+ INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
 -- -- Wooden
--- ( 1, 'Wooden Shovel',     'Wooden', 'Shovel',     60,   1, 2.5, 1,    '  1 RECIPE GOES HERE'),
--- ( 2, 'Wooden Sword',      'Wooden', 'Sword',      60,   1, 4,   1.6,  '  2 RECIPE GOES HERE'),
--- ( 3, 'Wooden Hoe',        'Wooden', 'Hoe',        60,   1, 1,   1,    '  3 RECIPE GOES HERE'),
--- ( 4, 'Wooden Axe',        'Wooden', 'Axe',        60,   1, 7,   0.8,  '  4 RECIPE GOES HERE'),
--- ( 5, 'Wooden Pickaxe',    'Wooden', 'Pickaxe',    60,   1, 2,   1.2,  '  5 RECIPE GOES HERE'),
--- -- Stone
--- ( 6, 'Stone Shovel',      'Stone', 'Shovel',      132,  1, 3.5, 1,    '  6 RECIPE GOES HERE'),
--- ( 7, 'Stone Sword',       'Stone', 'Sword',       132,  1, 5,   1.6,  '  7 RECIPE GOES HERE'),
--- ( 8, 'Stone Hoe',         'Stone', 'Hoe',         132,  1, 1,   2,    '  8 RECIPE GOES HERE'),
--- ( 9, 'Stone Axe',         'Stone', 'Axe',         132,  1, 9,   0.8,  '  9 RECIPE GOES HERE'),
--- (10, 'Stone Pickaxe',     'Stone', 'Pickaxe',     132,  1, 3,   1.2,  ' 10 RECIPE GOES HERE'),
--- -- Iron
--- (11, 'Iron Shovel',       'Iron', 'Shovel',       251,  1, 4.5, 1,    ' 11 RECIPE GOES HERE'),
--- (12, 'Iron Sword',        'Iron', 'Sword',        251,  1, 6,   1.6,  ' 12 RECIPE GOES HERE'),
--- (13, 'Iron Hoe',          'Iron', 'Hoe',          251,  1, 1,   3,    ' 13 RECIPE GOES HERE'),
--- (14, 'Iron Axe',          'Iron', 'Axe',          251,  1, 9,   0.9,  ' 14 RECIPE GOES HERE'),
--- (15, 'Iron Pickaxe',      'Iron', 'Pickaxe',      251,  1, 4,   1.2,  ' 15 RECIPE GOES HERE'),
--- -- Gold
--- (16, 'Gold Shovel',       'Gold', 'Shovel',       33,   1, 2.5, 1,    ' 16 RECIPE GOES HERE'),
--- (17, 'Gold Sword',        'Gold', 'Sword',        33,   1, 4,   1.6,  ' 17 RECIPE GOES HERE'),
--- (18, 'Gold Hoe',          'Gold', 'Hoe',          33,   1, 1,   1,    ' 18 RECIPE GOES HERE'),
--- (19, 'Gold Axe',          'Gold', 'Axe',          33,   1, 7,   1,    ' 19 RECIPE GOES HERE'),
--- (20, 'Gold Pickaxe',      'Gold', 'Pickaxe',      33,   1, 2,   1.2,  ' 20 RECIPE GOES HERE'),
--- -- Diamond
--- (21, 'Diamond Shovel',    'Diamond', 'Shovel',    1562, 1, 5.5, 1,    ' 21 RECIPE GOES HERE'),
--- (22, 'Diamond Sword',     'Diamond', 'Sword',     1562, 1, 7,   1.6,  ' 22 RECIPE GOES HERE'),
--- (23, 'Diamond Hoe',       'Diamond', 'Hoe',       1562, 1, 1,   4,    ' 23 RECIPE GOES HERE'),
--- (24, 'Diamond Axe',       'Diamond', 'Axe',       1562, 1, 9,   1,    ' 24 RECIPE GOES HERE'),
--- (25, 'Diamond Pickaxe',   'Diamond', 'Pickaxe',   1562, 1, 5,   1.2,  ' 25 RECIPE GOES HERE'),
--- -- Netherite
--- (26, 'Netherite Shovel',  'Netherite', 'Shovel',  2032, 1, 6.5, 1,    ' 26 RECIPE GOES HERE'),
--- (27, 'Netherite Sword',   'Netherite', 'Sword',   2032, 1, 8,   1.6,  ' 27 RECIPE GOES HERE'),
--- (28, 'Netherite Hoe',     'Netherite', 'Hoe',     2032, 1, 1,   4,    ' 28 RECIPE GOES HERE'),
--- (29, 'Netherite Axe',     'Netherite', 'Axe',     2032, 1, 10,  1,    ' 29 RECIPE GOES HERE'),
--- (30, 'Netherite Pickaxe', 'Netherite', 'Pickaxe', 2032, 1, 6,   1.2,  ' 30 RECIPE GOES HERE');
+( 1, 'Wooden Shovel',     'Wooden', 'Shovel',     60,   1, 2.5, 1,     1),
+( 2, 'Wooden Sword',      'Wooden', 'Sword',      60,   1, 4,   1.6,   2),
+( 3, 'Wooden Hoe',        'Wooden', 'Hoe',        60,   1, 1,   1,     3),
+( 4, 'Wooden Axe',        'Wooden', 'Axe',        60,   1, 7,   0.8,   4),
+( 5, 'Wooden Pickaxe',    'Wooden', 'Pickaxe',    60,   1, 2,   1.2,   5),
+-- Stone
+( 6, 'Stone Shovel',      'Stone', 'Shovel',      132,  1, 3.5, 1,     6),
+( 7, 'Stone Sword',       'Stone', 'Sword',       132,  1, 5,   1.6,   7),
+( 8, 'Stone Hoe',         'Stone', 'Hoe',         132,  1, 1,   2,     8),
+( 9, 'Stone Axe',         'Stone', 'Axe',         132,  1, 9,   0.8,   9),
+(10, 'Stone Pickaxe',     'Stone', 'Pickaxe',     132,  1, 3,   1.2,  10),
+-- Iron
+(11, 'Iron Shovel',       'Iron', 'Shovel',       251,  1, 4.5, 1,    11),
+(12, 'Iron Sword',        'Iron', 'Sword',        251,  1, 6,   1.6,  12),
+(13, 'Iron Hoe',          'Iron', 'Hoe',          251,  1, 1,   3,    13),
+(14, 'Iron Axe',          'Iron', 'Axe',          251,  1, 9,   0.9,  14),
+(15, 'Iron Pickaxe',      'Iron', 'Pickaxe',      251,  1, 4,   1.2,  15),
+-- Gold
+(16, 'Gold Shovel',       'Gold', 'Shovel',       33,   1, 2.5, 1,    16),
+(17, 'Gold Sword',        'Gold', 'Sword',        33,   1, 4,   1.6,  17),
+(18, 'Gold Hoe',          'Gold', 'Hoe',          33,   1, 1,   1,    18),
+(19, 'Gold Axe',          'Gold', 'Axe',          33,   1, 7,   1,    19),
+(20, 'Gold Pickaxe',      'Gold', 'Pickaxe',      33,   1, 2,   1.2,  20),
+-- Diamond
+(21, 'Diamond Shovel',    'Diamond', 'Shovel',    1562, 1, 5.5, 1,    21),
+(22, 'Diamond Sword',     'Diamond', 'Sword',     1562, 1, 7,   1.6,  22),
+(23, 'Diamond Hoe',       'Diamond', 'Hoe',       1562, 1, 1,   4,    23),
+(24, 'Diamond Axe',       'Diamond', 'Axe',       1562, 1, 9,   1,    24),
+(25, 'Diamond Pickaxe',   'Diamond', 'Pickaxe',   1562, 1, 5,   1.2,  25),
+-- Netherite
+(26, 'Netherite Shovel',  'Netherite', 'Shovel',  2032, 1, 6.5, 1,    26),
+(27, 'Netherite Sword',   'Netherite', 'Sword',   2032, 1, 8,   1.6,  27),
+(28, 'Netherite Hoe',     'Netherite', 'Hoe',     2032, 1, 1,   4,    28),
+(29, 'Netherite Axe',     'Netherite', 'Axe',     2032, 1, 10,  1,    29),
+(30, 'Netherite Pickaxe', 'Netherite', 'Pickaxe', 2032, 1, 6,   1.2,  30);
 
 
 CREATE TABLE `Material`(
