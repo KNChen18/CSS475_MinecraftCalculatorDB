@@ -400,5 +400,14 @@ CREATE TABLE `MoB_Stats`(
     `Boots ID` VARCHAR(41) REFERENCES `ARMOR`(`NamingID`)
 );
 
+CREATE TABLE `ARMOR_ENCHANTED`(
+    `EnchantmentID` INT REFERENCES `ENCHANTMENTS` ( `ENCHANTMENT_ID` ),
+    `Armor ID` VARCHAR(41) REFERENCES `ARMOR`(`NamingID`)
+);
+
+CREATE TABLE `WEAPON_ENCHANTED`(
+    `EnchantmentID` INT REFERENCES `ENCHANTMENTS` ( `ENCHANTMENT_ID` ),
+    `WeaponID` INT REFERENCES `WEAPON`(`WeaponID`),
+);
 -- ---------------------------- end of Kris --------------------------------
 DROP DATABASE `MINECRAFT`;
