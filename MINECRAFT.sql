@@ -412,7 +412,7 @@ CREATE TABLE `ARMOR_ENCHANTED`(
 
 CREATE TABLE `WEAPON_ENCHANTED`(
     `EnchantmentID` INT REFERENCES `ENCHANTMENTS` ( `ENCHANTMENT_ID` ),
-    `WeaponID` INT REFERENCES `WEAPON`(`WeaponID`),
+    `WeaponID` INT REFERENCES `WEAPON`(`WeaponID`)
 );
 -- ---------------------------- end of Kris --------------------------------
 DROP DATABASE `MINECRAFT`;
