@@ -281,8 +281,8 @@ DESCRIBE `WEAPON`;
 CREATE TABLE `Material`(
     `MaterialID` INT PRIMARY KEY NOT NULL,
     `Name` VARCHAR(41) CHECK( `Name` IN ('*EMPTY*', 'Stick', 'Oak Plank', 'Cobblestone',
-    'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'Shovel', 'Hoe', 'Sword', 
-    'Axe', 'Pickaxe'))
+    'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'Diamond Shovel', 'Diamond Hoe', 'Diamond Sword', 
+    'Diamond Axe', 'Diamond Pickaxe'))
 );
 DESCRIBE `Material`;
 
@@ -295,11 +295,11 @@ INSERT INTO Material(`MaterialId`, `Name`) VALUES
 (5, 'Gold Ingot'),
 (6, 'Diamond'),
 (7, 'Netherite Ingot'),
-(8, 'Shovel'),
-(9, 'Hoe'),
-(10, 'Sword'),
-(11, 'Axe'),
-(12, 'Pickaxe');
+(8, 'Diamond Shovel'), 
+(9, 'Diamond Hoe'),
+(10, 'Diamond Sword'),
+(11, 'Diamond Axe'),
+(12, 'Diamond Pickaxe');
 
 CREATE TABLE `Recipe`(
     `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL, -- recipe ID is the same as namingID of the item being created 
@@ -361,28 +361,33 @@ VALUES
 (30, 30,    7, 12, 0,   0, 0, 0,     0, 0, 0);
 -- -------------------------- end of malachi -------------------------------
 -- Kris
-CREATE TABLE `ENCHANTMENTS` (
-    `ENCHANTMENT_ID` int UNIQUE PRIMARY KEY,
-    `ENCHANTMENT_TYPE` ENUM('ARMOUR', 'WEAPON'),
-    `ENCHANTMENT_NAME` ENUM ('PROTECTION', 'BLAST_PROTECTION','KNOCKBACK_PROTECTION','PROJECTILE_PROTECTION','FIRE_PROTECTION', 'FEATHER_FALLING', 'SHARPNESS', 'FIRE_ASPECT',
-							'SMITE', 'Bane_of_Arthropods', 'KNOCKBACK', 'SWEEPING_EDGE', 'POWER_ENCH','MULTISHOOT', 'PIERCING', 'PUNCH', 'QUICK_CHARGE', 'FLAME', 'IMPALING', 'RIPTIDE') UNIQUE ,
-    STAT_CHANGE varchar(40)
+CREATE TABLE ENCHANTMENT (
+    ENCHANTMENT_ID int UNIQUE PRIMARY KEY,
+    ENCHANTMENT_TYPE varchar(6) CHECK (ENCHANTMENT_TYPE = 'Armor' OR                                                                                                        
+    ENCHANTMENT_TYPE = 'Weapon'),
+    REGULAR_PROT int CHECK (REGULAR_PROT <= 4 AND REGULAR_PROT >= 0),
+    BLAST_PROT int CHECK (BLAST_PROT <= 4 AND BLAST_PROT >= 0),
+    KNOCKBACK_INC int CHECK (KNOCKBACK_INC <= 4 AND KNOCKBACK_INC >= 0),
+    projProt int CHECK (projProt <= 4 AND projProt >= 0),
+    fireProt int CHECK (fireProt <= 4 AND fireProt >= 0),
+    feather_fall int CHECK (feather_fall <= 4 AND feather_fall >= 0),
+    SHARPNESS int CHECK (SHARPNESS <= 5 AND SHARPNESS >= 0),
+    fireAsp int CHECK (fireAsp <= 2 AND fireAsp >= 0),
+    SMITE int CHECK (SMITE <= 4 AND SMITE >= 0),
+    baneOfA int CHECK (baneOfA <= 5 AND baneOfA >= 0),
+    KNOCKBACK int CHECK (KNOCKBACK <= 4 AND KNOCKBACK >= 0),
+    SWEEP_EDGE int CHECK (SWEEP_EDGE <= 4 AND SWEEP_EDGE >= 0),
+    POWER_ench int CHECK (POWER_ench <= 5 AND POWER_ench >= 0),
+    MULTISHOOT bool,
+    PIERCING int CHECK (PIERCING <= 4 AND PIERCING >= 0),
+    PUNCH int CHECK (PUNCH <= 2 AND PUNCH >= 0),
+    QUICK_CHARGE int CHECK (QUICK_CHARGE <= 3 AND QUICK_CHARGE >= 0),
+    FLAME bool,
+    IMAPLING bool,
+    RIPTIDE int CHECK (RIPTIDE <= 3 AND RIPTIDE >= 0)
 );
-DESCRIBE `ENCHANTMENTS`;
+DESCRIBE ENCHANTMENT;
 
-INSERT INTO `ENCHANTMENTS`(`ENCHANTMENT_ID`, `ENCHANTMENT_TYPE`, `ENCHANTMENT_NAME`) VALUES
-
-(001, 'ARMOUR', 'PROTECTION'),				(002, 'ARMOUR', 'BLAST_PROTECTION'),	(003, 'ARMOUR', 'KNOCKBACK_PROTECTION'),
-(004, 'ARMOUR', 'PROJECTILE_PROTECTION'),	(005, 'ARMOUR', 'FIRE_PROTECTION'), 	(006, 'ARMOUR', 'FEATHER_FALLING'),
-(007, 'WEAPON', 'SHARPNESS'),				(008, 'WEAPON', 'FIRE_ASPECT'),			(009, 'WEAPON', 'SMITE'),
-(010, 'WEAPON', 'Bane_of_Arthropods'), 		(011, 'WEAPON', 'KNOCKBACK'),			(012, 'WEAPON', 'SWEEPING_EDGE'),
-(013, 'WEAPON', 'POWER_ENCH'), 				(014, 'WEAPON', 'MULTISHOOT'), 			(015, 'WEAPON', 'PIERCING'),
-(016, 'WEAPON', 'PUNCH'),					(017, 'WEAPON', 'QUICK_CHARGE'),		(018, 'WEAPON', 'FLAME'),
-(019, 'WEAPON', 'IMPALING'),				(020, 'WEAPON', 'RIPTIDE');
-
-SELECT * FROM `ENCHANTMENTS`;
-
--- CREATE TABLE `ENCHANTED_ITEMS` ()
-
+INSERT into ENCHANTMENT values (1,"Armor",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
 -- ---------------------------- end of Kris --------------------------------
 DROP DATABASE `MINECRAFT`;
