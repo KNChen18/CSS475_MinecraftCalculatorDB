@@ -15,7 +15,7 @@ USE `MINECRAFT`;
 CREATE TABLE ARMOR(
    `NamingID` VARCHAR(41) PRIMARY KEY UNIQUE NOT NULL ,
    `Name` VARCHAR(41) UNIQUE NOT NULL,
-   `Material` VARCHAR(41) NOT NULL,
+   `Material Type` VARCHAR(41) NOT NULL,
    `Durability` INT NOT NULL,
    `Defense Points` FLOAT,
    `Knockback Resistance` FLOAT,
