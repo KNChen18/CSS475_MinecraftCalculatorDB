@@ -1,0 +1,12 @@
+-- --------------------------------------------------
+-- --------------- DESCRIBE TABLES ------------------
+DESCRIBE `MOB`;
+DESCRIBE `ARMOR`;
+DESCRIBE `WEAPON`;
+DESCRIBE `Material`;
+DESCRIBE `RECIPE`;
+DESCRIBE `POTION`;
+DESCRIBE `ENCHANTMENTS`;
+DESCRIBE `STATS`;
+DESCRIBE `ARMOR ENCHANTED`;
+DESCRIBE `ARMOR ENCHANTED`;

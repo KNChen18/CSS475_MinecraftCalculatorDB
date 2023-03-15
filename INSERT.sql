@@ -1,6 +1,6 @@
 -- ----------------------- MOB -------------------------
 -- -----------------------------------------------------
-INSERT INTO MOB (`NamingID`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Wears Armor`, `Equip Weapons`)
+INSERT INTO MOB (`NamingID`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Wears Armor`, `Equip Weapons`, 'RecipeID')
 VALUES
 ('bat', 6, NULL, NULL, NULL, 0, 0),
 ('bee', 10, 2, NULL, NULL, 0, 0),
@@ -75,37 +75,37 @@ SELECT * FROM MOB;
 -- ---------------------- ARMOR ------------------------
 -- -----------------------------------------------------
 -- Helmets
-INSERT INTO `ARMOR` VALUES( 'leather_helmet',    'Leather Cap',         'Leather',          55, 1, 0.1, 31);
-INSERT INTO `ARMOR` VALUES( 'golden_helmet',     'Golden Helmet',       'Gold',             77, 2, 0.1, 32);
-INSERT INTO `ARMOR` VALUES( 'chainmail_helmet',  'Chainmail Helmet',    'Chainmail',        165, 2, 0.1, 33);
-INSERT INTO `ARMOR` VALUES( 'iron_helmet',       'Iron Helmet',         'Iron',             165, 2, 0.1, 34);
-INSERT INTO `ARMOR` VALUES( 'diamond_helmet',    'Diamond Helmet',      'Diamond',          363, 3, 0.1, 35);
-INSERT INTO `ARMOR` VALUES( 'netherite_helmet',  'Netherite Helmet',    'Netherite Ingot',  407, 3, 0.1, 36);
-INSERT INTO `ARMOR` VALUES( 'turtle_helmet',     'Turtle Shell',        'Scute',            275, 2, 0.1, 55);
+INSERT INTO `ARMOR` VALUES( 'leather_helmet','Leather',          55, 1, 0.1, 31);
+INSERT INTO `ARMOR` VALUES( 'golden_helmet','Gold',             77, 2, 0.1, 32);
+INSERT INTO `ARMOR` VALUES( 'chainmail_helmet', 'Chainmail',        165, 2, 0.1, 33);
+INSERT INTO `ARMOR` VALUES( 'iron_helmet', 'Iron',             165, 2, 0.1, 34);
+INSERT INTO `ARMOR` VALUES( 'diamond_helmet', 'Diamond',          363, 3, 0.1, 35);
+INSERT INTO `ARMOR` VALUES( 'netherite_helmet', 'Netherite Ingot',  407, 3, 0.1, 36);
+INSERT INTO `ARMOR` VALUES( 'turtle_helmet', 'Scute',            275, 2, 0.1, 55);
 
 -- Chestplate
-INSERT INTO `ARMOR` VALUES( 'leather_chestplate',    'Leather Tunic',           'Leather',          80, 3, 0.1, 37);
-INSERT INTO `ARMOR` VALUES( 'golden_chestplate',     'Golden Chestplate',       'Gold',             112, 5, 0.1, 38);
-INSERT INTO `ARMOR` VALUES( 'chainmail_chestplate',  'Chainmail Chestplate',    'Chainmail',        240, 5, 0.1, 39);
-INSERT INTO `ARMOR` VALUES( 'iron_chestplate',       'Iron Chestplate',         'Iron',             240, 6, 0.1, 40);
-INSERT INTO `ARMOR` VALUES( 'diamond_chestplate',    'Diamond Chestplate',      'Diamond',          528, 8, 0.1, 41);
-INSERT INTO `ARMOR` VALUES( 'netherite_chestplate',  'Netherite Chestplate',    'Netherite Ingot',  592, 8, 0.1, 42);
+INSERT INTO `ARMOR` VALUES( 'leather_chestplate',    'Leather',          80, 3, 0.1, 37);
+INSERT INTO `ARMOR` VALUES( 'golden_chestplate',     'Gold',             112, 5, 0.1, 38);
+INSERT INTO `ARMOR` VALUES( 'chainmail_chestplate',  'Chainmail',        240, 5, 0.1, 39);
+INSERT INTO `ARMOR` VALUES( 'iron_chestplate',       'Iron',             240, 6, 0.1, 40);
+INSERT INTO `ARMOR` VALUES( 'diamond_chestplate',    'Diamond',          528, 8, 0.1, 41);
+INSERT INTO `ARMOR` VALUES( 'netherite_chestplate',  'Netherite Ingot',  592, 8, 0.1, 42);
 
 -- leggings
-INSERT INTO `ARMOR` VALUES( 'leather_leggings',  'Leather Pants',     'Leather',                75, 2, 0.1, 43);
-INSERT INTO `ARMOR` VALUES( 'golden_leggings',   'Golden Leggings',    'Gold',                  105, 1.5, 0.1,44);
-INSERT INTO `ARMOR` VALUES( 'chainmail_leggings',    'Chainmail Leggings',  'Chainmail',        225, 4, 0.1, 45);
-INSERT INTO `ARMOR` VALUES( 'iron_leggings',     'Iron Leggings',    'Iron',                    225, 5, 0.1, 46);
-INSERT INTO `ARMOR` VALUES( 'diamond_leggings',  'Diamond Leggings',  'Diamond',                495, 6, 0.1, 47);
-INSERT INTO `ARMOR` VALUES( 'netherite_leggings',    'Netherite Leggings',  'Netherite Ingot',  555, 6, 0.1, 48);
+INSERT INTO `ARMOR` VALUES( 'leather_leggings',     'Leather',                75, 2, 0.1, 43);
+INSERT INTO `ARMOR` VALUES( 'golden_leggings',      'Gold',                  105, 1.5, 0.1,44);
+INSERT INTO `ARMOR` VALUES( 'chainmail_leggings',   'Chainmail',        225, 4, 0.1, 45);
+INSERT INTO `ARMOR` VALUES( 'iron_leggings',        'Iron',                    225, 5, 0.1, 46);
+INSERT INTO `ARMOR` VALUES( 'diamond_leggings',     'Diamond',                495, 6, 0.1, 47);
+INSERT INTO `ARMOR` VALUES( 'netherite_leggings',   'Netherite Ingot',  555, 6, 0.1, 48);
 
 -- boots
-INSERT INTO `ARMOR` VALUES( 'leather_boots',    'Leather Boots',    'Leather',          65, 1, 0.1, 49);
-INSERT INTO `ARMOR` VALUES( 'golden_boots',     'Golden Boots',     'Gold',             91, 1, 0.1, 50);
-INSERT INTO `ARMOR` VALUES( 'chainmail_boots',  'Chainmail Boots',  'Chainmail',        195, 1, 0.1, 51);
-INSERT INTO `ARMOR` VALUES( 'iron_boots',       'Iron Boots',       'Iron',             195, 2, 0.1, 52);
-INSERT INTO `ARMOR` VALUES( 'diamond_boots',    'Diamond Boots',    'Diamond',          429,3, 0.1, 53);
-INSERT INTO `ARMOR` VALUES( 'netherite_boots',  'Netherite Boots',  'Netherite Ingot',  481, 3, 0.1, 54);
+INSERT INTO `ARMOR` VALUES( 'leather_boots',        'Leather',          65, 1, 0.1, 49);
+INSERT INTO `ARMOR` VALUES( 'golden_boots',         'Gold',             91, 1, 0.1, 50);
+INSERT INTO `ARMOR` VALUES( 'chainmail_boots',      'Chainmail',        195, 1, 0.1, 51);
+INSERT INTO `ARMOR` VALUES( 'iron_boots',           'Iron',             195, 2, 0.1, 52);
+INSERT INTO `ARMOR` VALUES( 'diamond_boots',         'Diamond',          429,3, 0.1, 53);
+INSERT INTO `ARMOR` VALUES( 'netherite_boots',      'Netherite Ingot',  481, 3, 0.1, 54);
 
 SELECT * FROM `ARMOR`;
 
