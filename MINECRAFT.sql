@@ -226,7 +226,7 @@ CREATE TABLE `WEAPON`(
 );
 DESCRIBE `WEAPON`;
 
- INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
+INSERT INTO WEAPON(`WeaponID`, `Name`, `MaterialType`, `WeaponType`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
 -- -- Wooden
 ( 1, 'Wooden Shovel',     'Wooden', 'Shovel',     60,   1, 2.5, 1,     1),
 ( 2, 'Wooden Sword',      'Wooden', 'Sword',      60,   1, 4,   1.6,   2),
