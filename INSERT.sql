@@ -1,6 +1,6 @@
 -- ----------------------- MOB -------------------------
 -- -----------------------------------------------------
-INSERT INTO MOB (`NamingID`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Wears Armor`, `Equip Weapons`, 'RecipeID')
+INSERT INTO MOB (`NamingID`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Wears Armor`, `Equip Weapons`)
 VALUES
 ('bat', 6, NULL, NULL, NULL, 0, 0),
 ('bee', 10, 2, NULL, NULL, 0, 0),
@@ -111,7 +111,7 @@ SELECT * FROM `ARMOR`;
 
 -- --------------------- WEAPON ------------------------
 -- -----------------------------------------------------
-INSERT INTO WEAPON(`WeaponID`, `Name`, `durability`, `knockback`, `base damage`, `reload time`, `WeaponRecipe`) VALUES
+INSERT INTO WEAPON(`WeaponID`, `Name`, `durability`, `knockback`, `base damage`, `reload time`, `RecipeID`) VALUES
 -- -- Wooden
 ( 1, 'Wooden Shovel',     60,   1, 2.5, 1,     1),
 ( 2, 'Wooden Sword',      60,   1, 4,   1.6,   2),
@@ -169,7 +169,7 @@ INSERT INTO Material(`MaterialId`, `Name`) VALUES
 
 -- --------------------- RECIPE ------------------------
 -- -----------------------------------------------------
-INSERT INTO `Recipe`(`RecipeID`, `Output_NamingID`,       `Material1`, `Material2`, `Material3`,
+INSERT INTO `Recipe`(`RecipeID`,                       `Material1`, `Material2`, `Material3`,
                                                         `Material4`, `Material5`, `Material6`,
                                                         `Material7`, `Material8`, `Material9`)
 VALUES
@@ -212,33 +212,33 @@ VALUES
 -- Armor
 
 --helmets
-(31, 31,    17, 17, 17,  17, 0, 17,   0, 0, 0),     --leather
-(32, 32,    5, 5, 5,     5, 0, 5,     0, 0, 0),     --gold
-(33, 33,    0, 0, 0,     0, 0, 0,     0, 0, 0),     --chainmail
-(34, 34,    4, 4, 4,     4, 0, 4,     0, 0, 0),     --iron
-(35, 35,    6, 6, 6,     6, 0, 6,     0, 0, 0),     --diamond
-(36, 36,    7, 13, 0,    0, 0, 0,     0, 0, 0),     --netherite
+(31, 31,    17, 17, 17,  17, 0, 17,   0, 0, 0),     -- leather
+(32, 32,    5, 5, 5,     5, 0, 5,     0, 0, 0),     -- gold
+(33, 33,    0, 0, 0,     0, 0, 0,     0, 0, 0),     -- chainmail
+(34, 34,    4, 4, 4,     4, 0, 4,     0, 0, 0),     -- iron
+(35, 35,    6, 6, 6,     6, 0, 6,     0, 0, 0),     -- diamond
+(36, 36,    7, 13, 0,    0, 0, 0,     0, 0, 0),     -- netherite
 --chestplates
-(37, 37,    17, 0, 17,   17, 17, 17, 17, 17, 17),   --leather
-(38, 38,    5, 0, 5,     5, 5, 5,    5, 5, 5),      --gold
-(39, 39,    0, 0, 0,     0, 0, 0,    0, 0, 0),      --chainmail
-(40, 40,    4, 0, 4,     4, 4, 4,    4, 4, 4),      --iron
-(41, 41,    6, 0, 6,     6, 6, 6,    6, 6, 6),      --diamond
-(42, 42,    7, 14, 0,    0, 0, 0,    0, 0, 0),      --netherite
+(37, 37,    17, 0, 17,   17, 17, 17, 17, 17, 17),   -- leather
+(38, 38,    5, 0, 5,     5, 5, 5,    5, 5, 5),      -- gold
+(39, 39,    0, 0, 0,     0, 0, 0,    0, 0, 0),      -- chainmail
+(40, 40,    4, 0, 4,     4, 4, 4,    4, 4, 4),      -- iron
+(41, 41,    6, 0, 6,     6, 6, 6,    6, 6, 6),      -- diamond
+(42, 42,    7, 14, 0,    0, 0, 0,    0, 0, 0),      -- netherite
 --leggings
-(43, 43,    17, 17, 17,  17, 0, 17,  17, 0, 17),    --leather
-(44, 44,    5, 5, 5,     5, 0, 5,    5, 0, 5),      --gold
-(45, 45,    0, 0, 0,     0, 0, 0,    0, 0, 0),      --chainmail
-(46, 46,    4, 4, 4,     4, 0, 4,    4, 0, 4),      --iron
-(47, 47,    6, 6, 6,     6, 0, 6,    6, 0, 6),      --diamond
-(48, 48,    7, 15, 0,   0, 0, 0,     0, 0, 0),      --netherite
+(43, 43,    17, 17, 17,  17, 0, 17,  17, 0, 17),    -- leather
+(44, 44,    5, 5, 5,     5, 0, 5,    5, 0, 5),      -- gold
+(45, 45,    0, 0, 0,     0, 0, 0,    0, 0, 0),      -- chainmail
+(46, 46,    4, 4, 4,     4, 0, 4,    4, 0, 4),      -- iron
+(47, 47,    6, 6, 6,     6, 0, 6,    6, 0, 6),      -- diamond
+(48, 48,    7, 15, 0,   0, 0, 0,     0, 0, 0),      -- netherite
 --boots
-(49, 49,   0, 0, 0,     17, 0, 17,   17, 0, 17),    --leather
-(50, 50,   0, 0, 0,     5, 0, 5,     5, 0, 5),      --gold
-(51, 51,   0, 0, 0,     0, 0, 0,     0, 0, 0),      --chainmail
-(52, 52,   0, 0, 0,     4, 0, 4,     4, 0, 4),      --iron
-(53, 53,   0, 0, 0,     6, 0, 6,     6, 0, 6),      --diamond
-(54, 54,    7, 16, 0,   0, 0, 0,     0, 0, 0),      --netherite
+(49, 49,   0, 0, 0,     17, 0, 17,   17, 0, 17),    -- leather
+(50, 50,   0, 0, 0,     5, 0, 5,     5, 0, 5),      -- gold
+(51, 51,   0, 0, 0,     0, 0, 0,     0, 0, 0),      -- chainmail
+(52, 52,   0, 0, 0,     4, 0, 4,     4, 0, 4),      -- iron
+(53, 53,   0, 0, 0,     6, 0, 6,     6, 0, 6),      -- diamond
+(54, 54,    7, 16, 0,   0, 0, 0,     0, 0, 0),      -- netherite
 --extra
 (55, 55,  18, 18, 18,     18, 0, 18,     0, 0, 0), -- turtle helmet
 
