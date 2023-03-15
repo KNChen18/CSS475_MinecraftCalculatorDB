@@ -74,8 +74,7 @@ CREATE TABLE MOB(
 `Attack Speed` INT,
 `Special Abilities` VARCHAR(50),
 `Wears Armor` TINYINT NOT NULL,
-`Equip Weapons` TINYINT NOT NULL
-,);
+`Equip Weapons` TINYINT NOT NULL);
 
 
 INSERT INTO MOB (`NamingID`, `Name`, `Health`, `Attack Damage`, `Attack Speed`, `Special Abilities`, `Wears Armor`, `Equip Weapons`)
