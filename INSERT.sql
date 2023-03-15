@@ -174,114 +174,114 @@ INSERT INTO `Recipe`(`RecipeID`,                       `Material1`, `Material2`,
                                                         `Material7`, `Material8`, `Material9`)
 VALUES
 -- Wooden
-(1, 1,      0, 2, 0,    0, 1, 0,     0, 1, 0),
-(2, 2,      0, 2, 0,    0, 2, 0,     0, 1, 0),
-(3, 3,      2, 2, 0,    0, 1, 0,     0, 1, 0),
-(4, 4,      2, 2, 0,    2, 1, 0,     0, 1, 0),
-(5, 5,      2, 2, 2,    0, 1, 0,     0, 1, 0),
+(1,      0, 2, 0,    0, 1, 0,     0, 1, 0),
+(2,      0, 2, 0,    0, 2, 0,     0, 1, 0),
+(3,      2, 2, 0,    0, 1, 0,     0, 1, 0),
+(4,      2, 2, 0,    2, 1, 0,     0, 1, 0),
+(5,      2, 2, 2,    0, 1, 0,     0, 1, 0),
 -- Stone
-(6, 6,      0, 3, 0,    0, 1, 0,     0, 1, 0),
-(7, 7,      0, 3, 0,    0, 3, 0,     0, 1, 0),
-(8, 8,      3, 3, 0,    0, 1, 0,     0, 1, 0),
-(9, 9,      3, 3, 0,    3, 1, 0,     0, 1, 0),
-(10, 10,    3, 3, 3,    0, 1, 0,     0, 1, 0),
+(6,      0, 3, 0,    0, 1, 0,     0, 1, 0),
+(7,      0, 3, 0,    0, 3, 0,     0, 1, 0),
+(8,      3, 3, 0,    0, 1, 0,     0, 1, 0),
+(9,      3, 3, 0,    3, 1, 0,     0, 1, 0),
+(10,     3, 3, 3,    0, 1, 0,     0, 1, 0),
 -- Iron
-(11, 11,    0, 4, 0,    0, 1, 0,     0, 1, 0),
-(12, 12,    0, 4, 0,    0, 4, 0,     0, 1, 0),
-(13, 13,    4, 4, 0,    0, 1, 0,     0, 1, 0),
-(14, 14,    4, 4, 0,    4, 1, 0,     0, 1, 0),
-(15, 15,    4, 4, 4,    0, 1, 0,     0, 1, 0),
+(11,     0, 4, 0,    0, 1, 0,     0, 1, 0),
+(12,     0, 4, 0,    0, 4, 0,     0, 1, 0),
+(13,     4, 4, 0,    0, 1, 0,     0, 1, 0),
+(14,     4, 4, 0,    4, 1, 0,     0, 1, 0),
+(15,     4, 4, 4,    0, 1, 0,     0, 1, 0),
 -- Gold
-(16, 16,    0, 5, 0,    0, 1, 0,     0, 1, 0),
-(17, 17,    0, 5, 0,    0, 5, 0,     0, 1, 0),
-(18, 18,    5, 5, 0,    0, 1, 0,     0, 1, 0),
-(19, 19,    5, 5, 0,    5, 1, 0,     0, 1, 0),
-(20, 20,    5, 5, 5,    0, 1, 0,     0, 1, 0),
+(16,     0, 5, 0,    0, 1, 0,     0, 1, 0),
+(17,     0, 5, 0,    0, 5, 0,     0, 1, 0),
+(18,     5, 5, 0,    0, 1, 0,     0, 1, 0),
+(19,     5, 5, 0,    5, 1, 0,     0, 1, 0),
+(20,     5, 5, 5,    0, 1, 0,     0, 1, 0),
 -- Diamond
-(21, 21,    0, 6, 0,    0, 1, 0,     0, 1, 0),
-(22, 22,    0, 6, 0,    0, 6, 0,     0, 1, 0),
-(23, 23,    6, 6, 0,    0, 1, 0,     0, 1, 0),
-(24, 24,    6, 6, 0,    6, 1, 0,     0, 1, 0),
-(25, 25,    6, 6, 6,    0, 1, 0,     0, 1, 0),
--- Netherite    (combines diamond tool with a netherite ingot)
-(26, 26,    7, 8, 0,    0, 0, 0,     0, 0, 0),
-(27, 27,    7, 9, 0,    0, 0, 0,     0, 0, 0),
-(28, 28,    7, 10, 0,   0, 0, 0,     0, 0, 0),
-(29, 29,    7, 11, 0,   0, 0, 0,     0, 0, 0),
-(30, 30,    7, 12, 0,   0, 0, 0,     0, 0, 0);
+(21,     0, 6, 0,    0, 1, 0,     0, 1, 0),
+(22,     0, 6, 0,    0, 6, 0,     0, 1, 0),
+(23,     6, 6, 0,    0, 1, 0,     0, 1, 0),
+(24,     6, 6, 0,    6, 1, 0,     0, 1, 0),
+(25,     6, 6, 6,    0, 1, 0,     0, 1, 0),
+-- Netherite    (combs diamond tool with a netherite ingot)
+(26,     7, 8, 0,    0, 0, 0,     0, 0, 0),
+(27,     7, 9, 0,    0, 0, 0,     0, 0, 0),
+(28,     7, 10, 0,   0, 0, 0,     0, 0, 0),
+(29,     7, 11, 0,   0, 0, 0,     0, 0, 0),
+(30,     7, 12, 0,   0, 0, 0,     0, 0, 0),
 -- Armor
 
---helmets
-(31, 31,    17, 17, 17,  17, 0, 17,   0, 0, 0),     -- leather
-(32, 32,    5, 5, 5,     5, 0, 5,     0, 0, 0),     -- gold
-(33, 33,    0, 0, 0,     0, 0, 0,     0, 0, 0),     -- chainmail
-(34, 34,    4, 4, 4,     4, 0, 4,     0, 0, 0),     -- iron
-(35, 35,    6, 6, 6,     6, 0, 6,     0, 0, 0),     -- diamond
-(36, 36,    7, 13, 0,    0, 0, 0,     0, 0, 0),     -- netherite
---chestplates
-(37, 37,    17, 0, 17,   17, 17, 17, 17, 17, 17),   -- leather
-(38, 38,    5, 0, 5,     5, 5, 5,    5, 5, 5),      -- gold
-(39, 39,    0, 0, 0,     0, 0, 0,    0, 0, 0),      -- chainmail
-(40, 40,    4, 0, 4,     4, 4, 4,    4, 4, 4),      -- iron
-(41, 41,    6, 0, 6,     6, 6, 6,    6, 6, 6),      -- diamond
-(42, 42,    7, 14, 0,    0, 0, 0,    0, 0, 0),      -- netherite
---leggings
-(43, 43,    17, 17, 17,  17, 0, 17,  17, 0, 17),    -- leather
-(44, 44,    5, 5, 5,     5, 0, 5,    5, 0, 5),      -- gold
-(45, 45,    0, 0, 0,     0, 0, 0,    0, 0, 0),      -- chainmail
-(46, 46,    4, 4, 4,     4, 0, 4,    4, 0, 4),      -- iron
-(47, 47,    6, 6, 6,     6, 0, 6,    6, 0, 6),      -- diamond
-(48, 48,    7, 15, 0,   0, 0, 0,     0, 0, 0),      -- netherite
---boots
-(49, 49,   0, 0, 0,     17, 0, 17,   17, 0, 17),    -- leather
-(50, 50,   0, 0, 0,     5, 0, 5,     5, 0, 5),      -- gold
-(51, 51,   0, 0, 0,     0, 0, 0,     0, 0, 0),      -- chainmail
-(52, 52,   0, 0, 0,     4, 0, 4,     4, 0, 4),      -- iron
-(53, 53,   0, 0, 0,     6, 0, 6,     6, 0, 6),      -- diamond
-(54, 54,    7, 16, 0,   0, 0, 0,     0, 0, 0),      -- netherite
---extra
-(55, 55,  18, 18, 18,     18, 0, 18,     0, 0, 0), -- turtle helmet
+-- helmets
+(31,     17, 17, 17,  17, 0, 17,   0, 0, 0),     -- leather
+(32,     5, 5, 5,     5, 0, 5,     0, 0, 0),     -- gold
+(33,     0, 0, 0,     0, 0, 0,     0, 0, 0),     -- chainmail
+(34,     4, 4, 4,     4, 0, 4,     0, 0, 0),     -- iron
+(35,     6, 6, 6,     6, 0, 6,     0, 0, 0),     -- diamond
+(36,     7, 13, 0,    0, 0, 0,     0, 0, 0),     -- netherite
+-- chestplates
+(37,     17, 0, 17,   17, 17, 17, 17, 17, 17),   -- leather
+(38,     5, 0, 5,     5, 5, 5,    5, 5, 5),      -- gold
+(39,     0, 0, 0,     0, 0, 0,    0, 0, 0),      -- chainmail
+(40,     4, 0, 4,     4, 4, 4,    4, 4, 4),      -- iron
+(41,     6, 0, 6,     6, 6, 6,    6, 6, 6),      -- diamond
+(42,     7, 14, 0,    0, 0, 0,    0, 0, 0),      -- netherite
+-- leggings
+(43,     17, 17, 17,  17, 0, 17,  17, 0, 17),    -- leather
+(44,     5, 5, 5,     5, 0, 5,    5, 0, 5),      -- gold
+(45,     0, 0, 0,     0, 0, 0,    0, 0, 0),      -- chainmail
+(46,     4, 4, 4,     4, 0, 4,    4, 0, 4),      -- iron
+(47,     6, 6, 6,     6, 0, 6,    6, 0, 6),      -- diamond
+(48,     7, 15, 0,   0, 0, 0,     0, 0, 0),      -- netherite
+-- boots
+(49,    0, 0, 0,     17, 0, 17,   17, 0, 17),    -- leather
+(50,    0, 0, 0,     5, 0, 5,     5, 0, 5),      -- gold
+(51,    0, 0, 0,     0, 0, 0,     0, 0, 0),      -- chainmail
+(52,    0, 0, 0,     4, 0, 4,     4, 0, 4),      -- iron
+(53,    0, 0, 0,     6, 0, 6,     6, 0, 6),      -- diamond
+(54,     7, 16, 0,   0, 0, 0,     0, 0, 0),      -- netherite
+-- extra
+(55,   18, 18, 18,     18, 0, 18,     0, 0, 0); -- turtle helmet
 
 -- --------------------- POTION ------------------------
 -- -----------------------------------------------------
-INSERT INTO `POTION` (Potion_id, name, duration, level, effects)
+INSERT INTO `POTION` (Potion_id, duration, level, effects)
 VALUES
-(1, 'Potion of Regeneration', 45, 'I', 'Restores health over time'),
-(2, 'Potion of Swiftness', 180, 'I', 'Increases movement speed'),
-(3, 'Potion of Fire Resistance', 180, 'I', 'Grants immunity to fire and lava'),
-(4, 'Potion of Poison', 45, 'I', 'Deals damage over time'),
-(5, 'Potion of Healing', 0, 'I', 'Restores a large amount of health instantly'),
-(6, 'Potion of Night Vision', 180, 'I', 'Allows the player to see in the dark'),
-(7, 'Potion of Weakness', 90, 'I', 'Reduces melee damage done by the player'),
-(8, 'Potion of Strength', 180, 'I', 'Increases melee damage done by the player'),
-(9, 'Potion of Slowness', 90, 'I', 'Reduces movement speed and action speed'),
-(10, 'Potion of Leaping', 180, 'I', 'Increases jump height'),
-(11, 'Potion of Harming', 0, 'I', 'Deals a large amount of damage instantly'),
-(12, 'Potion of Water Breathing', 180, 'I', 'Allows the player to breathe underwater'),
-(13, 'Potion of Invisibility', 180, 'I', 'Makes the player invisible to others and mobs'),
-(14, 'Potion of Regeneration II', 22, 'II', 'Restores health over time at a faster rate'),
-(15, 'Potion of Swiftness II', 90, 'II', 'Greatly increases movement speed'),
-(16, 'Potion of Poison II', 22, 'II', 'Deals more damage over time'),
-(17, 'Potion of Healing II', 0, 'II', 'Restores a larger amount of health instantly'),
-(18, 'Potion of Strength II', 90, 'II', 'Greatly increases melee damage done by the player'),
-(19, 'Potion of Leaping II', 90, 'II', 'Greatly increases jump height'),
-(20, 'Potion of Regeneration extended', 120, 'I', 'Restores health over a longer period of time'),
-(21, 'Potion of Swiftness extended', 480, 'I', 'Increases movement speed for a longer period of time'),
-(22, 'Potion of Fire Resistance extended', 480, 'I', 'Grants immunity to fire and lava for a longer period of time'),
-(23, 'Potion of Poison extended', 120, 'I', 'Deals damage over time for a longer period of time'),
-(24, 'Potion of Night Vision extended', 480, 'I', 'Allows the player to see in the dark for a longer period of time'),
-(25, 'Potion of Weakness extended', 240, 'I', 'Reduces melee damage done by the player for a longer period of time'),
-(26, 'Potion of Strength extended', 480, 'I', 'Increases melee damage done by the player for a longer period of time'),
-(27, 'Potion of Slowness extended', 240, 'I', 'Reduces movement speed and action speed for a longer period of time'),
-(28, 'Potion of Leaping extended', 480, 'I', 'Increases jump height for a longer time'),
-(29, 'Potion of Water Breathing extended', 480, 'I', 'Allows breathing underwater for longer time'),
-(30, 'Potion of Invisibility extended', 480, 'I', 'Makes player invisible for longer time'),
-(31, 'Potion of Regeneration II extended', 11, 'II', 'Faster health regeneration for longer time'),
-(32, 'Potion of Swiftness II extended', 240, 'II', 'Increases movement speed for longer time'),
-(33, 'Potion of Poison II extended', 11, 'II', 'Deals more damage over time'),
-(34, 'Potion of Healing II extended', 0, 'II', 'Restores more health for longer time'),
-(35, 'Potion of Strength II extended', 240, 'II', 'Increases melee damage over time'),
-(36, 'Potion of Leaping II extended', 240, 'II', 'Increases jump height for longer time');
+(1,     45, 'I', 'Restores health over time'),
+(2,     180, 'I', 'Increases movement speed'),
+(3,     180, 'I', 'Grants immunity to fire and lava'),
+(4,     45, 'I', 'Deals damage over time'),
+(5,     0, 'I', 'Restores a large amount of health instantly'),
+(6,     180, 'I', 'Allows the player to see in the dark'),
+(7,     90, 'I', 'Reduces melee damage done by the player'),
+(8,     180, 'I', 'Increases melee damage done by the player'),
+(9,     90, 'I', 'Reduces movement speed and action speed'),
+(10,    180, 'I', 'Increases jump height'),
+(11,    0, 'I', 'Deals a large amount of damage instantly'),
+(12,    180, 'I', 'Allows the player to breathe underwater'),
+(13,    180, 'I', 'Makes the player invisible to others and mobs'),
+(14,    22, 'II', 'Restores health over time at a faster rate'),
+(15,    90, 'II', 'Greatly increases movement speed'),
+(16,    22, 'II', 'Deals more damage over time'),
+(17,    0, 'II', 'Restores a larger amount of health instantly'),
+(18,    90, 'II', 'Greatly increases melee damage done by the player'),
+(19,    90, 'II', 'Greatly increases jump height'),
+(20,    120, 'I', 'Restores health over a longer period of time'),
+(21,    480, 'I', 'Increases movement speed for a longer period of time'),
+(22,    480, 'I', 'Grants immunity to fire and lava for a longer period of time'),
+(23,    120, 'I', 'Deals damage over time for a longer period of time'),
+(24,    480, 'I', 'Allows the player to see in the dark for a longer period of time'),
+(25,    240, 'I', 'Reduces melee damage done by the player for a longer period of time'),
+(26,    480, 'I', 'Increases melee damage done by the player for a longer period of time'),
+(27,    240, 'I', 'Reduces movement speed and action speed for a longer period of time'),
+(28,    480, 'I', 'Increases jump height for a longer time'),
+(29,    480, 'I', 'Allows breathing underwater for longer time'),
+(30,    480, 'I', 'Makes player invisible for longer time'),
+(31,    11, 'II', 'Faster health regeneration for longer time'),
+(32,    240, 'II', 'Increases movement speed for longer time'),
+(33,    11, 'II', 'Deals more damage over time'),
+(34,    0, 'II', 'Restores more health for longer time'),
+(35,    240, 'II', 'Increases melee damage over time'),
+(36,    240, 'II', 'Increases jump height for longer time');
 
 SELECT * FROM `potion`;
 
