@@ -230,7 +230,7 @@ CREATE TABLE `WEAPON`(
     `knockback` FLOAT NOT NULL,
     `base damage` FLOAT NOT NULL,
     `reload time` FLOAT NOT NULL,
-    `WeaponRecipe` INT NOT NULL
+    FOREIGN KEY (RecipeID) REFERENCES  Recipe(RecipeID)
 );
 DESCRIBE `WEAPON`;
 
@@ -274,10 +274,12 @@ DESCRIBE `WEAPON`;
 
 
 CREATE TABLE `Material`(
-    `MaterialID` INT PRIMARY KEY NOT NULL,
+    `MaterialID` INT NOT NULL,
     `Name` VARCHAR(41) CHECK( `Name` IN ('*EMPTY*', 'Stick', 'Oak Plank', 'Cobblestone',
     'Iron Ingot', 'Gold Ingot', 'Diamond', 'Netherite Ingot', 'Diamond Shovel', 'Diamond Hoe', 'Diamond Sword', 
-    'Diamond Axe', 'Diamond Pickaxe', 'Leather'))
+    'Diamond Axe', 'Diamond Pickaxe', 'Diamond Helmet', 'Diamond Chestplate', 
+    'Diamond Leggings', 'Diamond Boots', 'Leather')),
+    PRIMARY KEY (MaterialID)
 );
 DESCRIBE `Material`;
 
@@ -295,20 +297,25 @@ INSERT INTO Material(`MaterialId`, `Name`) VALUES
 (10, 'Diamond Sword'),
 (11, 'Diamond Axe'),
 (12, 'Diamond Pickaxe'),
-(13, 'Leather');
+(13, 'Diamond Helmet'),
+(14, 'Diamond Chestplate'),
+(15, 'Diamond Leggings'),
+(16, 'Diamond Boots'),
+(17, 'Leather');
 
 CREATE TABLE `Recipe`(
-    `RecipeID` INT PRIMARY KEY UNIQUE NOT NULL, -- recipe ID is the same as namingID of the item being created 
+    `RecipeID` INT UNIQUE NOT NULL, -- recipe ID is the same as namingID of the item being created 
     `Output_NamingID` INT, -- this is foreign key of the output
-    `Material1` INT REFERENCES `Material` ( `MaterialID` ),    -- corresponds to a materialID
-    `Material2` INT REFERENCES `Material` ( `MaterialID` ),
-    `Material3` INT REFERENCES `Material` ( `MaterialID` ),
-    `Material4` INT REFERENCES `Material` ( `MaterialID` ),
-    `Material5` INT REFERENCES `Material` ( `MaterialID` ),
-    `Material6` INT REFERENCES `Material` ( `MaterialID` ),
-    `Material7` INT REFERENCES `Material` ( `MaterialID` ),
-    `Material8` INT REFERENCES `Material` ( `MaterialID` ),
-    `Material9` INT REFERENCES `Material` ( `MaterialID` )
+    FOREIGN KEY `Material1` REFERENCES `Material` ( `MaterialID` ),    
+    FOREIGN KEY `Material2` REFERENCES `Material` ( `MaterialID` ),
+    FOREIGN KEY `Material3` REFERENCES `Material` ( `MaterialID` ),
+    FOREIGN KEY `Material4` REFERENCES `Material` ( `MaterialID` ),
+    FOREIGN KEY `Material5` REFERENCES `Material` ( `MaterialID` ),
+    FOREIGN KEY `Material6` REFERENCES `Material` ( `MaterialID` ),
+    FOREIGN KEY `Material7` REFERENCES `Material` ( `MaterialID` ),
+    FOREIGN KEY `Material8` REFERENCES `Material` ( `MaterialID` ),
+    FOREIGN KEY `Material9` REFERENCES `Material` ( `MaterialID` ),
+    PRIMARY KEY (RecipeID)
 );
 DESCRIBE `Recipe`;
 
@@ -356,36 +363,41 @@ VALUES
 (29, 29,    7, 11, 0,   0, 0, 0,     0, 0, 0),
 (30, 30,    7, 12, 0,   0, 0, 0,     0, 0, 0);
 -- Armor
--- (31, 31,    13, 13, 13,  13, 0, 13,     0, 0, 0);
--- (32, 32,    13, 0, 13,   13, 13, 13,    13, 13, 13);
--- (33, 33,    13, 13, 13,  13, 0, 13,     13, 0, 13);
--- (34, 34,    0, 0, 0,     13, 0, 13,     13, 0, 13);
--- (35, 35,    4, 4, 4,   4, 0, 4,     0, 0, 0);
--- (36, 36,    4, 0, 4,   4, 4, 4,     4, 4, 4);
--- (37, 37,    4, 4, 4,   4, 0, 4,     4, 0, 4);
--- (38, 38,    0, 0, 0,   4, 0, 4,     4, 0, 4);
--- (39, 39,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (40, 40,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (41, 41,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (42, 42,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (43, 43,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (44, 44,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (45, 45,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (40, 40,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (46, 46,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (47, 47,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (48, 48,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (49, 49,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (50, 50,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (52, 52,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (53, 53,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (54, 54,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (55, 55,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (50, 50,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (56, 56,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (57, 57,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (58, 58,    0, 0, 0,   0, 0, 0,     0, 0, 0);
--- (59, 59,    0, 0, 0,   0, 0, 0,     0, 0, 0);
+
+--helmets
+-- (31, 31,    17, 17, 17,   17, 0, 17,     0, 0, 0),
+-- (32, 32,    a, a, a,   a, 0, a,     0, 0, 0),
+-- (33, 33,    a, a, a,   a, 0, a,     0, 0, 0),
+-- (34, 34,    a, a, a,   a, 0, a,     0, 0, 0),
+-- (35, 35,    a, a, a,   a, 0, a,     0, 0, 0),
+-- (36, 36,    a, a, a,   a, 0, a,     0, 0, 0),
+
+--
+-- (37, 37,    
+-- (38, 38,    
+-- (39, 39,    
+-- (40, 40,    
+-- (41, 41,    
+-- (42, 42,    
+
+-- (43, 43,    
+-- (44, 44,    
+-- (45, 45,    
+-- (40, 40,    
+-- (46, 46,    
+-- (47, 47,    
+
+-- (48, 48,    
+-- (49, 49,    
+-- (50, 50,    
+-- (52, 52,    
+-- (53, 53,    
+-- (54, 54,    
+
+-- (55, 55,    
+-- (50, 50,    
+-- (56, 56,    
+-- (57, 57,    
 
 -- -------------------------- end of malachi -------------------------------
 -- Kris--
