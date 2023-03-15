@@ -18,7 +18,7 @@ int main(){
     bool end = false;\
     int i = 1;
     while ( !end ){
-        for ( int j = 1; j <= armors.size(); j ++ ){
+        for ( int j = 0; j < armors.size(); j ++ ){
             for ( int e = 1; e <=30; e ++){
                 cout << "( " << i++ << ",\t\"" << armors[j] << "\", \t" << e << "),"<< endl;
             }
