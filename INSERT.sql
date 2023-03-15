@@ -306,7 +306,7 @@ INSERT INTO `ENCHANTMENTS`(`ENCHANTMENT_ID`, `ENCHANTMENT_TYPE`, `ENCHANTMENT_NA
 
 
 INSERT INTO `ARMOR ENCHANTED` ( `ENCHANTED_ARMOR_ID`,`ARMOR_ID`,`ENCHANTMENT_ID` )
-VALUES(
+VALUES
 ( 1,	"leather_helmet", 	1),
 ( 2,	"leather_helmet", 	2),
 ( 3,	"leather_helmet", 	3),
@@ -1056,5 +1056,4 @@ VALUES(
 ( 747,	"netherite_boots", 	27),
 ( 748,	"netherite_boots", 	28),
 ( 749,	"netherite_boots", 	29),
-( 750,	"netherite_boots", 	30)
-);
+( 750,	"netherite_boots", 	30);
