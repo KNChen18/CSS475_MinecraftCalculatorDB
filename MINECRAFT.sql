@@ -19,7 +19,7 @@ CREATE TABLE `ARMOR`(
    `Durability` INT NOT NULL,
    `Defense Points` FLOAT,
    `Knockback Resistance` FLOAT,
-   FOREIGN KEY (RecipeID) REFERENCES Recipe(RecipeID)
+   `RecipeID` INT NOT NULL UNIQUE 
 );
 
 
