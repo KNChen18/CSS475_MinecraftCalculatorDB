@@ -107,8 +107,6 @@ INSERT INTO `ARMOR` VALUES( 'iron_boots',           'Iron',             195, 2, 
 INSERT INTO `ARMOR` VALUES( 'diamond_boots',         'Diamond',          429,3, 0.1, 53);
 INSERT INTO `ARMOR` VALUES( 'netherite_boots',      'Netherite Ingot',  481, 3, 0.1, 54);
 
-SELECT * FROM `ARMOR`;
-
 -- --------------------- WEAPON ------------------------
 -- -----------------------------------------------------
 INSERT INTO WEAPON(`WeaponID`, `Name`, `durability`, `knockback`, `base damage`, `reload time`, `RecipeID`) VALUES
@@ -165,7 +163,6 @@ INSERT INTO Material(`MaterialId`, `Name`) VALUES
 (16, 'Diamond Boots'),
 (17, 'Leather'),
 (18, 'Scute');
-
 
 -- --------------------- RECIPE ------------------------
 -- -----------------------------------------------------
@@ -283,28 +280,32 @@ VALUES
 (35,    240, 'II', 'Increases melee damage over time'),
 (36,    240, 'II', 'Increases jump height for longer time');
 
-SELECT * FROM `potion`;
+-- ------------------ ENCHATMENTS ----------------------
+-- -----------------------------------------------------
+INSERT INTO `ENCHANTMENTS`(`ENCHANTMENT_ID`, `ENCHANTMENT_TYPE`, `ENCHANTMENT_NAME`, `STACK_NUM`) VALUES
 
--- INSERT INTO `ENCHANTMENTS`(`ENCHANTMENT_ID`, `ENCHANTMENT_TYPE`, `ENCHANTMENT_NAME`, `STACK_NUM`) VALUES
+(001, 'ARMOUR', 'PROTECTION', 'I'),						(002, 'ARMOUR', 'PROTECTION', 'II'), 					(003, 'ARMOUR', 'PROTECTION', 'III'), 					(004, 'ARMOUR', 'PROTECTION', 'IV'),			
+(005, 'ARMOUR', 'BLAST_PROTECTION', 'I'),				(006, 'ARMOUR', 'BLAST_PROTECTION', 'II'),				(007, 'ARMOUR', 'BLAST_PROTECTION', 'III'),				(008, 'ARMOUR', 'BLAST_PROTECTION', 'IV'),	
+(009, 'ARMOUR', 'PROJECTILE_PROTECTION', 'I'),			(010, 'ARMOUR', 'PROJECTILE_PROTECTION', 'II'),			(011, 'ARMOUR', 'PROJECTILE_PROTECTION', 'III'),		(012, 'ARMOUR', 'PROJECTILE_PROTECTION', 'IV'),	
+(013, 'ARMOUR', 'FIRE_PROTECTION', 'I'),				(014, 'ARMOUR', 'FIRE_PROTECTION', 'II'),				(015, 'ARMOUR', 'FIRE_PROTECTION', 'III'),				(016, 'ARMOUR', 'FIRE_PROTECTION', 'IV'),	
+(017, 'ARMOUR', 'FEATHER_FALLING', 'I'),				(018, 'ARMOUR', 'FEATHER_FALLING', 'II'),				(019, 'ARMOUR', 'FEATHER_FALLING', 'III'),				(020, 'ARMOUR', 'FEATHER_FALLING', 'IV'),
+(021, 'WEAPON', 'SHARPNESS', 'I'),						(022, 'WEAPON', 'SHARPNESS', 'II'),						(023, 'WEAPON', 'SHARPNESS', 'III'),					(024, 'WEAPON', 'SHARPNESS', 'IV'),				
+(025, 'WEAPON', 'FIRE_ASPECT', 'I'),					(026, 'WEAPON', 'FIRE_ASPECT', 'II'),		
+(027, 'WEAPON', 'SMITE', 'I'),							(028, 'WEAPON', 'SMITE', 'II'),							(029, 'WEAPON', 'SMITE', 'III'),						(030, 'WEAPON', 'SMITE', 'IV'),						(031, 'WEAPON', 'SMITE', 'V'),
+(032, 'WEAPON', 'Bane_of_Arthropods', 'I'), 			(033, 'WEAPON', 'Bane_of_Arthropods', 'II'),			(034, 'WEAPON', 'Bane_of_Arthropods', 'III'),			(035, 'WEAPON', 'Bane_of_Arthropods', 'IV'),		(036, 'WEAPON', 'Bane_of_Arthropods', 'V'),	
+(037, 'WEAPON', 'KNOCKBACK', 'I'),						(038, 'WEAPON', 'KNOCKBACK', 'II'),	
+(039, 'WEAPON', 'SWEEPING_EDGE', 'I'),					(040, 'WEAPON', 'SWEEPING_EDGE', 'II'),					(041, 'WEAPON', 'SWEEPING_EDGE', 'III'),
+(042, 'WEAPON', 'POWER', 'I'), 							(043, 'WEAPON', 'POWER', 'II'),							(044, 'WEAPON', 'POWER', 'III'),						(045, 'WEAPON', 'POWER', 'IV'),						(046, 'WEAPON', 'POWER', 'V'),	
+(047, 'WEAPON', 'MULTISHOOT', 'I'), 			
+(048, 'WEAPON', 'PIERCING', 'I'),						(049, 'WEAPON', 'PIERCING', 'II'),						(050, 'WEAPON', 'PIERCING', 'III'),						(051, 'WEAPON', 'PIERCING', 'IV'),
+(052, 'WEAPON', 'PUNCH', 'I'),							(053, 'WEAPON', 'PUNCH', 'II'),		
+(054, 'WEAPON', 'QUICK_CHARGE', 'I'),					(055, 'WEAPON', 'QUICK_CHARGE', 'II'),					(056, 'WEAPON', 'QUICK_CHARGE', 'III'),	
+(057, 'WEAPON', 'FLAME', 'I'),
+(058, 'WEAPON', 'IMPALING', 'I'),						(059, 'WEAPON', 'IMPALING', 'II'),						(060, 'WEAPON', 'IMPALING', 'III'),						(061, 'WEAPON', 'IMPALING', 'IV'),					(062, 'WEAPON', 'IMPALING', 'V'),			
+(063, 'WEAPON', 'RIPTIDE', 'I'),						(064, 'WEAPON', 'RIPTIDE', 'II');
 
--- (001, 'ARMOUR', 'PROTECTION', 'I'),						(002, 'ARMOUR', 'PROTECTION', 'II'), 					(003, 'ARMOUR', 'PROTECTION', 'III'), 					(004, 'ARMOUR', 'PROTECTION', 'IV'),			
--- (005, 'ARMOUR', 'BLAST_PROTECTION', 'I'),				(006, 'ARMOUR', 'BLAST_PROTECTION', 'II'),				(007, 'ARMOUR', 'BLAST_PROTECTION', 'III'),				(008, 'ARMOUR', 'BLAST_PROTECTION', 'IV'),	
--- (009, 'ARMOUR', 'PROJECTILE_PROTECTION', 'I'),			(010, 'ARMOUR', 'PROJECTILE_PROTECTION', 'II'),			(011, 'ARMOUR', 'PROJECTILE_PROTECTION', 'III'),		(012, 'ARMOUR', 'PROJECTILE_PROTECTION', 'IV'),	
--- (013, 'ARMOUR', 'FIRE_PROTECTION', 'I'),				(014, 'ARMOUR', 'FIRE_PROTECTION', 'II'),				(015, 'ARMOUR', 'FIRE_PROTECTION', 'III'),				(016, 'ARMOUR', 'FIRE_PROTECTION', 'IV'),	
--- (017, 'ARMOUR', 'FEATHER_FALLING', 'I'),				(018, 'ARMOUR', 'FEATHER_FALLING', 'II'),				(019, 'ARMOUR', 'FEATHER_FALLING', 'III'),				(020, 'ARMOUR', 'FEATHER_FALLING', 'IV'),
--- (021, 'WEAPON', 'SHARPNESS', 'I'),						(022, 'WEAPON', 'SHARPNESS', 'II'),						(023, 'WEAPON', 'SHARPNESS', 'III'),					(024, 'WEAPON', 'SHARPNESS', 'IV'),				
--- (025, 'WEAPON', 'FIRE_ASPECT', 'I'),					(026, 'WEAPON', 'FIRE_ASPECT', 'II'),		
--- (027, 'WEAPON', 'SMITE', 'I'),							(028, 'WEAPON', 'SMITE', 'II'),							(029, 'WEAPON', 'SMITE', 'III'),						(030, 'WEAPON', 'SMITE', 'IV'),						(031, 'WEAPON', 'SMITE', 'V'),
--- (032, 'WEAPON', 'Bane_of_Arthropods', 'I'), 			(033, 'WEAPON', 'Bane_of_Arthropods', 'II'),			(034, 'WEAPON', 'Bane_of_Arthropods', 'III'),			(035, 'WEAPON', 'Bane_of_Arthropods', 'IV'),		(036, 'WEAPON', 'Bane_of_Arthropods', 'V'),	
--- (037, 'WEAPON', 'KNOCKBACK', 'I'),						(038, 'WEAPON', 'KNOCKBACK', 'II'),	
--- (039, 'WEAPON', 'SWEEPING_EDGE', 'I'),					(040, 'WEAPON', 'SWEEPING_EDGE', 'II'),					(041, 'WEAPON', 'SWEEPING_EDGE', 'III'),
--- (042, 'WEAPON', 'POWER', 'I'), 							(043, 'WEAPON', 'POWER', 'II'),							(044, 'WEAPON', 'POWER', 'III'),						(045, 'WEAPON', 'POWER', 'IV'),						(046, 'WEAPON', 'POWER', 'V'),	
--- (047, 'WEAPON', 'MULTISHOOT', 'I'), 			
--- (048, 'WEAPON', 'PIERCING', 'I'),						(049, 'WEAPON', 'PIERCING', 'II'),						(050, 'WEAPON', 'PIERCING', 'III'),						(051, 'WEAPON', 'PIERCING', 'IV'),
--- (052, 'WEAPON', 'PUNCH', 'I'),							(053, 'WEAPON', 'PUNCH', 'II'),		
--- (054, 'WEAPON', 'QUICK_CHARGE', 'I'),					(055, 'WEAPON', 'QUICK_CHARGE', 'II'),					(056, 'WEAPON', 'QUICK_CHARGE', 'III'),	
--- (057, 'WEAPON', 'FLAME', 'I'),
--- (058, 'WEAPON', 'IMPALING', 'I'),						(059, 'WEAPON', 'IMPALING', 'II'),						(060, 'WEAPON', 'IMPALING', 'III'),						(061, 'WEAPON', 'IMPALING', 'IV'),					(062, 'WEAPON', 'IMPALING', 'V'),			
--- (063, 'WEAPON', 'RIPTIDE', 'I'),						(064, 'WEAPON', 'RIPTIDE', 'II'),						(065, 'WEAPON', 'RIPTIDE', 'III');
 
--- SELECT * FROM `ENCHANTMENTS`;
+INSERT INTO `ARMOR ENCHANTED` ( `ENCHANTED_ARMOR_ID`,`ARMOR_ID`,`ENCHANTMENT_ID` )
+VALUES(
+
+);
