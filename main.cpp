@@ -26,23 +26,33 @@ void printEnchatedArmor(){
         end = true;
     }
 }
-
-int main(){
-    // printEnchatedArmor();
-    
-                // 
-//       CREATE TABLE `WEAPON ENCHANTED`(
-//     `ENCHANTED_WEAPON_ID` INT,
-//     `WEAPON_ID` INT,
-//     `ENCHANTMENT_ID` int
-// );
-    // ( int, int , int)
-
+void printEnchatedWeapon(){
     int ewID = 1;
     for ( int weaponID = 1; weaponID <= 30; weaponID++ ){
         for ( int enchatID = 1; enchatID <= 30; enchatID ++){
             cout << "( " << ewID++ << ",\t\"" << weaponID << "\", \t" << enchatID << "),"<< endl;
         }
     }
+}
+
+void printStats(){
+//     CREATE TABLE `STATS`(
+//     `STAT_ID` int UNIQUE PRIMARY KEY,
+//     `MOBID`   VARCHAR(41),
+//     `ENCHANTED_WEAPON_ID` INT, -- 900
+//     `POTION_ID` INT,
+//     `ENCHANTED HEMLET ID` INT, 
+//     `ENCHANTED CHESTPLATE ID` INT,
+//     `ENCHANTED LEGGINGS ID` INT,
+//     `ENCHANTED BOOTS ID` INT
+// );
+    int statID = 1;
+    string MOBID = "player";
+    int enchanted_weapon_id = 1; // to 900
+    
+}
+int main(){
+    // printEnchatedArmor();
+    // printEnchatedWeapon();
     return 0;
 }
