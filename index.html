@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minecraft Damage</title> 
+        <style>
+            body{
+                background:lightgreen;
+            }
+            .contact-form{
+                max-width:400px;
+                margin:auto;
+                border-radius:10px;
+                background-color: lightgray;
+                padding:20px;
+            }
+            input[type=text], select{
+                width:100%;
+                padding:10px 20 px;
+                margin:10px 0;
+                display:inline-block;
+                border:2px solid darkslategray;
+                border-radius: 4px;
+                box-sizing:border-box;
+            }
+            input[type=submit]{
+                width:100%;
+                background: green;
+                color:white;
+                padding: 12px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor:pointer;
+            }
+            input[type=submit]:hover{
+                background: gray;
+            }
+        </style>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <!-- Music -->
+        <audio controls autoplay loop src = "music.mp3"></audio>
+
+        <h1>MINECRAFT ATTACK DAMAGE CALCULATOR</h1> 
+        <hr> 
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+
+        <div class ="contact-form">
+        <form>
+
+        <label for ="mob_name"> Mob</label>
+        <select id ="mob_name">
+            <option value = "Player"> Player </option>
+            <option value = "Zombies"> Zombies </option>
+            <option value = "Skeleton"> Skeleton </option>
+            <option value = "Creeper"> Creeper </option>
+            <option value = "Villager"> Villager </option>
+        </select>
+        
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+        
+        <label for ="weapon_name"> Weapon</label>
+        <select id ="weapon_name">
+
+            <option value = "none"> none </option>
+
+            <option value = "Wooden Shovel"> Wooden Shovel </option>
+            <option value = "Stone Shovel"> Stone Shovel </option>
+            <option value = "Iron Shovel"> Iron Shovel </option>
+            <option value = "Gold Shovel"> Gold Shovel </option>
+            <option value = "Diamond Shovel"> Diamond Shovel </option>
+            <option value = "Netherite Shovel"> Netherite Shovel </option>
+            <option value = "Wooden Hoe"> Wooden Hoe </option>
+            <option value = "Stone Hoe"> Stone Hoe </option>
+            <option value = "Iron Hoe"> Iron Hoe </option>
+            <option value = "Gold Hoe"> Gold Hoe </option>
+            <option value = "Diamond Hoe"> Diamond Hoe </option>
+            <option value = "Netherite Hoe"> Netherite Hoe </option>
+            <option value = "Wooden Sword"> Wooden Sword </option>
+            <option value = "Stone Sword"> Stone Sword </option>
+            <option value = "Iron Sword"> Iron Sword </option>
+            <option value = "Gold Sword"> Gold Sword </option>
+            <option value = "Diamond Sword"> Diamond Sword </option>
+            <option value = "Netherite Sword"> Netherite Sword </option>
+            <option value = "Wooden Axe"> Wooden Axe </option>
+            <option value = "Stone Axe"> Stone Axe </option>
+            <option value = "Iron Axe"> Iron Axe </option>
+            <option value = "Gold Axe"> Gold Axe </option>
+            <option value = "Diamond Axe"> Diamond Axe </option>
+            <option value = "Netherite Axe"> Netherite Axe </option>
+            <option value = "Wooden Pickaxe"> Wooden Pickaxe </option>
+            <option value = "Stone Pickaxe"> Stone Pickaxe </option>
+            <option value = "Iron Pickaxe"> Iron Pickaxe </option>
+            <option value = "Gold Pickaxe"> Gold Pickaxe </option>
+            <option value = "Diamond Pickaxe"> Diamond Pickaxe </option>
+            <option value = "Netherite Pickaxe"> Netherite Pickaxe </option>
+         
+        </select>
+        
+
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+        
+        <label for ="helmet_name"> Helmet</label>
+        <select id ="helmet_name">
+
+            <option value = "none"> none </option>
+
+            <option value = "Leather Helmet"> Leather Cap </option>
+            <option value = "Gold Helmet"> Gold Helmet </option>
+            <option value = "Chainmail Helmet"> Chainmail Helmet </option>
+            <option value = "Iron Helmet"> Iron Helmet </option>
+            <option value = "Diamond Helmet"> Diamond Helmet </option>
+            <option value = "Netherite Helmet"> Netherite Helmet </option>
+
+        </select>
+        <label for ="helmet_enchantment"> Enchantment</label>
+            <select id ="helmet_Enchantment">
+    
+                <option value = "none"> none </option> 
+                <option value = "protection"> Protection </option> 
+                <option value = "Fire Protection"> Fire Protection </option> 
+                <option value = "Blast Protection"> Blast Protection </option> 
+                <option value = "Projectile Protection"> Projectile Protection </option>   
+        </select>
+        <label for ="helmet_level"> Level</label>
+            <select id ="helmet_level">
+    
+                <option value = "none"> none </option> 
+                <option value = "I"> I </option> 
+                <option value = "II"> II </option> 
+                <option value = "III"> III </option> 
+                <option value = "IV"> IV </option>   
+        </select>
+    
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+
+        <label for ="chestplate_name"> Chestplate</label>
+        <select id ="chestplate_name">
+
+            <option value = "none"> none </option>
+            <option value = "Leather Tunic"> Leather Tunic </option>
+            <option value = "Gold Chestplate"> Gold Chestplate </option>
+            <option value = "Chainmail Chestplate"> Chainmail Chestplate </option>
+            <option value = "Iron Chestplate"> Iron Chestplate </option>
+            <option value = "Diamond Chestplate"> Diamond Chestplate </option>
+            <option value = "Netherite Chestplate"> Netherite Chestplate </option>
+        </select>
+
+        <label for ="helmet_enchantment"> Enchantment</label>
+            <select id ="helmet_Enchantment">
+    
+                <option value = "none"> none </option> 
+                <option value = "protection"> Protection </option> 
+                <option value = "Fire Protection"> Fire Protection </option> 
+                <option value = "Blast Protection"> Blast Protection </option> 
+                <option value = "Projectile Protection"> Projectile Protection </option>   
+        </select>
+        <label for ="helmet_level"> Level</label>
+            <select id ="helmet_level">
+    
+                <option value = "none"> none </option> 
+                <option value = "I"> I </option> 
+                <option value = "II"> II </option> 
+                <option value = "III"> III </option> 
+                <option value = "IV"> IV </option>   
+        </select>
+
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+
+        <label for ="leggings_name"> Leggings</label>
+        <select id ="leggings_name">
+
+            <option value = "none"> none </option>
+            <option value = "Leather Pants"> Leather Pants </option>
+            <option value = "Gold Leggings"> Gold Leggings </option>
+            <option value = "Chainmail Leggings"> Chainmail Leggings </option>
+            <option value = "Iron Leggings"> Iron Leggings </option>
+            <option value = "Diamond Leggings"> Diamond Leggings </option>
+            <option value = "Netherite Leggings"> Netherite Leggings </option>
+        </select>
+        
+        <label for ="helmet_enchantment"> Enchantment</label>
+            <select id ="helmet_Enchantment">
+    
+                <option value = "none"> none </option> 
+                <option value = "protection"> Protection </option> 
+                <option value = "Fire Protection"> Fire Protection </option> 
+                <option value = "Blast Protection"> Blast Protection </option> 
+                <option value = "Projectile Protection"> Projectile Protection </option>   
+        </select>
+        <label for ="helmet_level"> Level</label>
+            <select id ="helmet_level">
+    
+                <option value = "none"> none </option> 
+                <option value = "I"> I </option> 
+                <option value = "II"> II </option> 
+                <option value = "III"> III </option> 
+                <option value = "IV"> IV </option>   
+        </select>
+
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+
+        <label for ="boots_name"> Boots</label>
+        <select id ="boots_name">
+            <option value = "none"> none </option>
+            <option value = "Leather Boots"> Leather Boots </option>
+            <option value = "Gold Boots"> Gold Boots </option>
+            <option value = "Chainmail Boots"> Chainmail Boots </option>
+            <option value = "Iron Boots"> Iron Boots </option>
+            <option value = "Diamond Boots"> Diamond Boots </option>
+            <option value = "Netherite Boots"> Netherite Boots </option>
+        </select>
+
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+        <br> <!-- skip line here -->
+        <input type ="submit" value ="Calculate">
+
+        </form>
+            
+        
+    </body>
+</html>
