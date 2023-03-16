@@ -139,12 +139,12 @@ INSERT INTO WEAPON(`WeaponID`, `Name`, `durability`, `knockback`, `base damage`,
 (22, 'Diamond Sword',     1562, 1, 7,   1.6,  22),
 (23, 'Diamond Hoe',       1562, 1, 1,   4,    23),
 (24, 'Diamond Axe',       1562, 1, 9,   1,    24),
-(25, 'Diamond Pickaxe',   1562, 1, 6,   1.2,  25),
+(25, 'Diamond Pickaxe',   1562, 1, 5,   1.2,  25),
 -- Netherite
-(26, 'Netherite Shovel',    2031, 1, 5.5, 1,    26),
-(27, 'Netherite Sword',     2031, 1, 7,   1.6,  27),
+(26, 'Netherite Shovel',    2031, 1, 6.5, 1,    26),
+(27, 'Netherite Sword',     2031, 1, 8,   1.6,  27),
 (28, 'Netherite Hoe',       2031, 1, 1,   4,    28),
-(29, 'Netherite Axe',       2031, 1, 10,   1,    29),
+(29, 'Netherite Axe',       2031, 1, 10,   1,   29),
 (30, 'Netherite Pickaxe',   2031, 1, 6,   1.2,  30);
 
 -- -------------------- MATERIAL -----------------------
