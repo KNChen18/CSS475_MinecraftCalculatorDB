@@ -17,3 +17,5 @@ In our database we use data from the video game itself as well as our own self-c
 - material
 
 We use the data in regards to the listed components/entities then report/calculate the damage/protection the user will experience in the given fighting simulation. 
+
+For our final we then hosted the project on the Google Cloud Service using SQL scripts along with drafts of a PHP supported front-end for a friendly user interface.
